@@ -1,0 +1,6 @@
+# Controls System
+
+This function captures the current state of the controls, parses it, and updates the game state accordingly.
+
+> **Note**
+> This function was genwerated with an older version of Scale and, as such, is just a stub. I'll be regenerating this function once the TypeScript Host/Guest implementations are ready forthe latest version of Scale.

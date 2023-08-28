@@ -3,7 +3,8 @@
   "packageManager": "yarn@3.6.3",
   "workspaces": [
     "packages/camera-system",
-    "packages/client"
+    "packages/client",
+    "packages/controls-system"
   ],
   "scripts": {
     "build:client": "yarn build:client",
