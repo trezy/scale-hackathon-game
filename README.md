@@ -6,3 +6,4 @@ This repo is being built as an example of how [Scale](https://scale.sh) could be
 * [`client`](/packages/client/README.md)
 * [`controls-system`](/packages/controls-system/README.md)
 * [`move-system`](/packages/move-system/README.md)
+* [`physics-system`](/packages/physics-system/README.md)

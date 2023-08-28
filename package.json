@@ -5,7 +5,8 @@
     "packages/camera-system",
     "packages/client",
     "packages/controls-system",
-    "packages/move-system"
+    "packages/move-system",
+    "packages/physics-system"
   ],
   "scripts": {
     "build:client": "yarn build:client",
