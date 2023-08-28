@@ -1,8 +1,7 @@
 {
   "name": "client",
   "description": "Game client.",
-  "version": "1.0.0",
-  "license": "BSD-3-Clause",
+  "version": "0.0.0-development",
   "main": "index.js",
   "private": true,
   "packageManager": "yarn@3.6.3",
