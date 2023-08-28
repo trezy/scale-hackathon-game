@@ -5,3 +5,4 @@ This repo is being built as an example of how [Scale](https://scale.sh) could be
 * [`camera-system`](/packages/camera-system/README.md)
 * [`client`](/packages/client/README.md)
 * [`controls-system`](/packages/controls-system/README.md)
+* [`move-system`](/packages/move-system/README.md)
