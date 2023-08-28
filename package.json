@@ -2,7 +2,14 @@
   "private": true,
   "packageManager": "yarn@3.6.3",
   "workspaces": [
+    "packages/client"
   ],
+  "scripts": {
+    "build:client": "yarn build:client",
+    "dev:client": "yarn workspace client dev",
+    "lint:client": "yarn workspace client lint",
+    "start:client": "yarn workspace client start"
+  },
   "devDependencies": {
     "@types/node": "20.5.7",
     "@typescript-eslint/eslint-plugin": "^6.4.1",

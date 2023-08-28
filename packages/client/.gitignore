@@ -1,0 +1,6 @@
+.env
+.env.build
+.env.local
+.next
+next-env.d.ts
+.vercel/
