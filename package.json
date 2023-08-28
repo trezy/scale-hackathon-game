@@ -6,7 +6,8 @@
     "packages/client",
     "packages/controls-system",
     "packages/move-system",
-    "packages/physics-system"
+    "packages/physics-system",
+    "packages/spawn-system"
   ],
   "scripts": {
     "build:client": "yarn build:client",
