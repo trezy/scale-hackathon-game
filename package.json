@@ -2,6 +2,7 @@
   "private": true,
   "packageManager": "yarn@3.6.3",
   "workspaces": [
+    "packages/ai-system",
     "packages/camera-system",
     "packages/client",
     "packages/controls-system",
