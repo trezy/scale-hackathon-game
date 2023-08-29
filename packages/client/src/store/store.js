@@ -35,4 +35,9 @@ export const store = makeStore({
 		createEnemy(150, 80, 10, 10),
 		createPlayer(),
 	],
+
+	viewport: {
+		height: 0,
+		width: 0,
+	},
 })

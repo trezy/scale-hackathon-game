@@ -1,9 +1,14 @@
 // Module imports
-import {
-	Graphics,
-	useApp,
-} from '@pixi/react'
+import { Graphics } from '@pixi/react'
 import { useCallback } from 'react'
+import { useStore } from 'statery'
+
+
+
+
+
+// Local imports
+import { store } from '../../store/store.js'
 
 
 
@@ -15,14 +20,14 @@ import { useCallback } from 'react'
  * @component
  */
 export function GameBackground() {
-	const app = useApp()
+	const { viewport } = useStore(store)
 
 	const draw = useCallback(graphics => {
 		graphics.clear()
 
 		graphics.beginFill(0x00ff00)
-		graphics.drawRect(0, 0, app.screen.width, app.screen.height)
-	}, [app])
+		graphics.drawRect(0, 0, viewport.width, viewport.height)
+	}, [viewport])
 
 	return (
 		<Graphics draw={draw} />

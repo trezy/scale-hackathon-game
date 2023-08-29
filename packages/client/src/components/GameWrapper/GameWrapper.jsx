@@ -1,8 +1,6 @@
 // Module imports
-// import { BlurFilter } from 'pixi.js'
 import { Stage } from '@pixi/react'
-// import { useMemo } from 'react'
-// import { useStore } from 'statery'
+import { useRef } from 'react'
 
 
 
@@ -10,6 +8,8 @@ import { Stage } from '@pixi/react'
 
 // Local imports
 import { Game } from '../Game/Game.jsx'
+
+import styles from './GameWrapper.module.scss'
 
 
 
@@ -21,9 +21,15 @@ import { Game } from '../Game/Game.jsx'
  * @component
  */
 export function GameWrapper() {
+	const gameWrapperRef = useRef(null)
+
 	return (
-		<Stage>
-			<Game />
-		</Stage>
+		<div
+			ref={gameWrapperRef}
+			className={styles['game-wrapper']}>
+			<Stage>
+				<Game resizeToRef={gameWrapperRef} />
+			</Stage>
+		</div>
 	)
 }
