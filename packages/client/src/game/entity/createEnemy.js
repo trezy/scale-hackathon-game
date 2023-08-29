@@ -1,4 +1,5 @@
 // Local imports
+import { aiComponent } from '../component/aiComponent.js'
 import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'
 import { positionComponent } from '../component/positionComponent.js'
@@ -20,6 +21,7 @@ import { velocityComponent } from '../component/velocityComponent.js'
  */
 export function createEnemy(x, y, width, height) {
 	return createEntity(
+		aiComponent(),
 		colorComponent(0xff0000),
 		positionComponent(x, y),
 		sizeComponent(width, height),
