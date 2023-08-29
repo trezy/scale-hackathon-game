@@ -5,7 +5,10 @@
  */
 export function aiSystem(store) {
 	store.set(previousState => {
-		const { entities } = previousState
+		const {
+			entities,
+			viewport,
+		} = previousState
 
 		return {
 			entities: entities.map(entity => {
@@ -14,8 +17,8 @@ export function aiSystem(store) {
 						if (!entity.queue.length) {
 							entity.queue.push({
 								destination: {
-									x: Math.floor((entity.position.x + (Math.random() * 50)) * (Math.random() > 0.5 ? 1 : -1)),
-									y: Math.floor((entity.position.y + (Math.random() * 50)) * (Math.random() > 0.5 ? 1 : -1)),
+									x: Math.max(0, Math.min(viewport.width - entity.size.width, Math.floor((entity.position.x + (Math.random() * 100)) * (Math.random() > 0.5 ? 1 : -1)))),
+									y: Math.max(0, Math.min(viewport.height - entity.size.height, Math.floor((entity.position.y + (Math.random() * 100)) * (Math.random() > 0.5 ? 1 : -1)))),
 								},
 								type: 'move to',
 							})
