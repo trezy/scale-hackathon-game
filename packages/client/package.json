@@ -15,11 +15,20 @@
     "@loopholelabs/scale": "^0.3.19",
     "@loopholelabs/scale-http-adapters": "^0.3.9",
     "@pixi/react": "^7.1.0",
+    "ai-system": "workspace:*",
+    "camera-system": "workspace:*",
+    "controls-system": "workspace:*",
+    "move-system": "workspace:*",
     "next": "^13.4.19",
+    "physics-system": "workspace:*",
     "pixi.js": "^7.2.4",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "spawn-system": "workspace:*",
+    "statery": "^0.6.3",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",

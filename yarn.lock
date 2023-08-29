@@ -2331,7 +2331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ai-system@workspace:packages/ai-system":
+"ai-system@workspace:*, ai-system@workspace:packages/ai-system":
   version: 0.0.0-use.local
   resolution: "ai-system@workspace:packages/ai-system"
   dependencies:
@@ -3031,7 +3031,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camera-system@workspace:packages/camera-system":
+"camera-system@workspace:*, camera-system@workspace:packages/camera-system":
   version: 0.0.0-use.local
   resolution: "camera-system@workspace:packages/camera-system"
   dependencies:
@@ -3173,17 +3173,26 @@ __metadata:
     "@next/eslint-plugin-next": ^13.4.19
     "@pixi/react": ^7.1.0
     "@types/react": ^18.2.21
+    ai-system: "workspace:*"
     better-docs: ^2.7.2
+    camera-system: "workspace:*"
+    controls-system: "workspace:*"
     eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-react: ^7.33.2
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-react-perf: ^3.3.1
     eslint-plugin-react-prefer-function-component: ^3.2.0
+    move-system: "workspace:*"
     next: ^13.4.19
+    physics-system: "workspace:*"
     pixi.js: ^7.2.4
+    prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
     sass: ^1.66.1
+    spawn-system: "workspace:*"
+    statery: ^0.6.3
+    uuid: ^9.0.0
   languageName: unknown
   linkType: soft
 
@@ -3368,7 +3377,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"controls-system@workspace:packages/controls-system":
+"controls-system@workspace:*, controls-system@workspace:packages/controls-system":
   version: 0.0.0-use.local
   resolution: "controls-system@workspace:packages/controls-system"
   dependencies:
@@ -6780,7 +6789,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"move-system@workspace:packages/move-system":
+"move-system@workspace:*, move-system@workspace:packages/move-system":
   version: 0.0.0-use.local
   resolution: "move-system@workspace:packages/move-system"
   dependencies:
@@ -7370,7 +7379,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"physics-system@workspace:packages/physics-system":
+"physics-system@workspace:*, physics-system@workspace:packages/physics-system":
   version: 0.0.0-use.local
   resolution: "physics-system@workspace:packages/physics-system"
   dependencies:
@@ -8427,7 +8436,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"spawn-system@workspace:packages/spawn-system":
+"spawn-system@workspace:*, spawn-system@workspace:packages/spawn-system":
   version: 0.0.0-use.local
   resolution: "spawn-system@workspace:packages/spawn-system"
   dependencies:
@@ -8482,6 +8491,15 @@ __metadata:
   dependencies:
     escape-string-regexp: ^2.0.0
   checksum: 052bf4d25bbf5f78e06c1d5e67de2e088b06871fa04107ca8d3f0e9d9263326e2942c8bedee3545795fc77d787d443a538345eef74db2f8e35db3558c6f91ff7
+  languageName: node
+  linkType: hard
+
+"statery@npm:^0.6.3":
+  version: 0.6.3
+  resolution: "statery@npm:0.6.3"
+  peerDependencies:
+    react: ">=18.0"
+  checksum: 0711fe890079e44552c5ce26ca3f07a5d8b5365bb626949924fe102ed2ed83a7c186808c7697f0850d1e404db037c7607f831bcd4e827bca8dbacb5c3f9b7cbc
   languageName: node
   linkType: hard
 
