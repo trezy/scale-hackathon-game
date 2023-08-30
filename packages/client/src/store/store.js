@@ -16,6 +16,10 @@ import { generateInitialControlState } from '../helpers/generateInitialControlSt
 
 
 export const store = makeStore({
+	areAssetsLoaded: false,
+
+	assetLoadingProgress: 0,
+
 	camera: {
 		position: {
 			x: 0,
@@ -37,6 +41,10 @@ export const store = makeStore({
 		createEnemy(150, 80, 20, 20),
 		createPlayer(),
 	],
+
+	isLoadingAssets: false,
+
+	isInitialising: false,
 
 	viewport: {
 		height: 0,
