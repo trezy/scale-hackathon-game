@@ -37,6 +37,9 @@ export function Debugger() {
 
 				<dt>{'Player Y:'}</dt>
 				<dd>{player.position.y.toFixed(2)}</dd>
+
+				<dt>{'Player is firing:'}</dt>
+				<dd>{String(player.weapons.isFiring)}</dd>
 			</dl>
 		</div>
 	)

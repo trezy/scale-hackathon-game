@@ -135,4 +135,33 @@ export const CONTROL_BINDINGS = {
 		],
 		type: CONTROL_TYPES.KEYS,
 	},
+
+	fire: {
+		// eslint-disable-next-line jsdoc/require-jsdoc
+		onActivate: () => {
+			store.set(previousState => {
+				const player = getPlayer(previousState)
+
+				player.weapons.isFiring = true
+
+				return { entities: previousState.entities }
+			})
+		},
+		// eslint-disable-next-line jsdoc/require-jsdoc
+		onDeactivate: () => {
+			store.set(previousState => {
+				const player = getPlayer(previousState)
+
+				player.weapons.isFiring = false
+
+				return { entities: previousState.entities }
+			})
+		},
+		bindings: [
+			{
+				keys: ['Space'],
+			},
+		],
+		type: CONTROL_TYPES.KEYS,
+	},
 }
