@@ -9,8 +9,6 @@ const ScaleAdapter = require('@loopholelabs/scale-http-adapters/nextjs')
 
 
 module.exports = ScaleAdapter.WithScale({
-	reactStrictMode: true,
-
 	// eslint-disable-next-line jsdoc/require-jsdoc
 	webpack(config) {
 		config.module.rules.push({
