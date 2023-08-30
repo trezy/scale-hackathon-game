@@ -1,10 +1,18 @@
-// Local imports
+// Module imports
 import dynamic from 'next/dynamic'
 
 
 
 
 
+// Local imports
+import { Debugger } from '../components/Debugger/Debugger.jsx'
+
+
+
+
+
+// Constants
 const GameComponent = dynamic(() => {
 	return import('../components/GameWrapper/GameWrapper.jsx')
 		.then(mod => mod.GameWrapper)
@@ -24,6 +32,9 @@ const GameComponent = dynamic(() => {
  */
 export default function HomePage() {
 	return (
-		<GameComponent />
+		<>
+			<Debugger />
+			<GameComponent />
+		</>
 	)
 }
