@@ -42,6 +42,9 @@ export const store = makeStore({
 		createPlayer(),
 	],
 
+	/** @type {null | number[]} */
+	entityRenderOrder: null,
+
 	isLoadingAssets: false,
 
 	isInitialising: false,

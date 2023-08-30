@@ -8,6 +8,7 @@
     "packages/controls-system",
     "packages/move-system",
     "packages/physics-system",
+    "packages/sort-system",
     "packages/spawn-system"
   ],
   "scripts": {

@@ -21,17 +21,24 @@ import { useGameLoop } from '../../hooks/useGameLoop.js'
  * @component
  */
 export function GameEntities() {
-	const { entities } = useStore(store)
+	const {
+		entities,
+		entityRenderOrder,
+	} = useStore(store)
 
 	useGameLoop()
 
 	return useMemo(() => {
-		return entities.map(entity => {
+		return entityRenderOrder.map(entityIndex => {
+			const entity = entities[entityIndex]
 			return (
 				<Entity
 					key={entity.id}
 					entity={entity} />
 			)
 		})
-	}, [entities])
+	}, [
+		entities,
+		entityRenderOrder,
+	])
 }
