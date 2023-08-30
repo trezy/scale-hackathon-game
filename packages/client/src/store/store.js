@@ -31,8 +31,8 @@ export const store = makeStore({
 
 	/** @type {object[]} */
 	entities: [
-		createEnemy(100, 100, 10, 10),
-		createEnemy(150, 80, 10, 10),
+		createEnemy(100, 100, 20, 20),
+		createEnemy(150, 80, 20, 20),
 		createPlayer(),
 	],
 

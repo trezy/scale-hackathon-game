@@ -25,8 +25,8 @@ export function Entity(props) {
 		graphics.drawRect(
 			0,
 			0,
-			20,
-			20,
+			entity.size.width,
+			entity.size.height,
 		)
 	}, [entity])
 

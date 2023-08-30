@@ -19,7 +19,7 @@ export function createPlayer() {
 		{ isPlayer: true },
 		colorComponent(0x0000ff),
 		positionComponent(0, 0),
-		sizeComponent(10, 10),
+		sizeComponent(20, 20),
 		velocityComponent(0, 0),
 	)
 }
