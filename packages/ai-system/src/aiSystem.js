@@ -19,7 +19,7 @@ export function aiSystem(store) {
 			entities: entities.map(entity => {
 				if (entity.ai) {
 					checkActions(entity, state)
-					executeActions(entity)
+					executeActions(entity, state)
 				}
 
 				return entity

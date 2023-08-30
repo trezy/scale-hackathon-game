@@ -29,6 +29,8 @@ export const store = makeStore({
 
 	delta: 0,
 
+	deltaMS: 0,
+
 	/** @type {object[]} */
 	entities: [
 		createEnemy(100, 100, 20, 20),

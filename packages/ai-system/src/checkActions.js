@@ -1,4 +1,5 @@
 // Local imports
+import { generateIdle } from './generateIdle.js'
 import { generateWander } from './generateWander.js'
 
 
@@ -18,7 +19,15 @@ export function checkActions(entity, state) {
 	} = entity.ai
 
 	if (!queue.length) {
-		queue.push(generateWander(entity, state.viewport))
+		let newAction = null
+
+		if (Math.random() > 0.75) {
+			newAction = generateIdle()
+		} else {
+			newAction = generateWander(entity, state.viewport)
+		}
+
+		queue.push(newAction)
 	}
 
 	if (!action) {

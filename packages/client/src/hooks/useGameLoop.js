@@ -22,8 +22,11 @@ import { store } from '../store/store.js'
  * Uses the Pixi.js ticker to run all systems in the game loop.
  */
 export function useGameLoop() {
-	useTick(delta => {
-		store.set(() => ({ delta }))
+	useTick((delta, ticker) => {
+		store.set(() => ({
+			delta,
+			deltaMS: ticker.deltaMS,
+		}))
 
 		controlsSystem(store)
 		moveSystem(store)
