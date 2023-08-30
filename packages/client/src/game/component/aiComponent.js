@@ -2,15 +2,19 @@
  * Manages the AI for a computer-controlled entity.
  *
  * @returns {{
- * 	action: null | object,
- * 	isAI: true,
- * 	queue: object[],
+ * 	ai: {
+ * 		action: null | object,
+ * 		queue: object[],
+ * 	},
  * }} The new AI component.
  */
 export function aiComponent() {
-	return {
-		action: null,
-		isAI: true,
-		queue: [],
+	const component = {
+		ai: {
+			action: null,
+			queue: [],
+		},
 	}
+
+	return component
 }

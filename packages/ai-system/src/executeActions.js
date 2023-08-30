@@ -1,6 +1,6 @@
 // Local imports
 import { ACTION_TYPES } from './ACTION_TYPES.js'
-import { handleMoveTo } from './handleMoveTo.js'
+import { handleWander } from './handleWander.js'
 
 
 
@@ -12,13 +12,15 @@ import { handleMoveTo } from './handleMoveTo.js'
  * @param {object} entity The entity to execute actions for.
  */
 export function executeActions(entity) {
-	if (!entity.action) {
+	const { action } = entity.ai
+
+	if (!action) {
 		return
 	}
 
-	switch (entity.action.type) {
-		case ACTION_TYPES.MOVE_TO:
-			handleMoveTo(entity)
+	switch (action.type) {
+		case ACTION_TYPES.WANDER:
+			handleWander(entity)
 			break
 
 		default:

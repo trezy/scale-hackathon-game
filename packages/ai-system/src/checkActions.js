@@ -1,5 +1,5 @@
 // Local imports
-import { generateMoveTo } from './generateMoveTo.js'
+import { generateWander } from './generateWander.js'
 
 
 
@@ -12,11 +12,16 @@ import { generateMoveTo } from './generateMoveTo.js'
  * @param {object} state Game state.
  */
 export function checkActions(entity, state) {
-	if (!entity.queue.length) {
-		entity.queue.push(generateMoveTo(entity, state.viewport))
+	const {
+		action,
+		queue,
+	} = entity.ai
+
+	if (!queue.length) {
+		queue.push(generateWander(entity, state.viewport))
 	}
 
-	if (!entity.action) {
-		entity.action = entity.queue.shift()
+	if (!action) {
+		entity.ai.action = queue.shift()
 	}
 }
