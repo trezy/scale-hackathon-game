@@ -1,10 +1,11 @@
 // Module imports
 import {
-	useEffect,
-	useMemo,
-} from 'react'
+	BaseTexture,
+	SCALE_MODES,
+} from '@pixi/core'
 import PropTypes from 'prop-types'
 import { useApp } from '@pixi/react'
+import { useEffect } from 'react'
 import { useStore } from 'statery'
 
 
@@ -12,8 +13,9 @@ import { useStore } from 'statery'
 
 
 // Local imports
-import { Entity } from '../Entity/Entity.jsx'
 import { GameBackground } from '../GameBackground/GameBackground.jsx'
+import { GameEntities } from '../GameEntities/GameEntities.jsx'
+import { loadGameAssets } from '../../game/loadGameAssets.js'
 import { store } from '../../store/store.js'
 import { useGameLoop } from '../../hooks/useGameLoop.js'
 
@@ -28,25 +30,29 @@ import { useGameLoop } from '../../hooks/useGameLoop.js'
  */
 export function Game(props) {
 	const { resizeToRef } = props
+	const {
+		areAssetsLoaded,
+		isLoadingAssets,
+	} = useStore(store)
 
 	const pixiApp = useApp()
-	const { entities } = useStore(store)
 
 	useGameLoop()
 
-	const entitiesComponents = useMemo(() => {
-		return entities.map(entity => {
-			return (
-				<Entity
-					key={entity.id}
-					entity={entity} />
-			)
-		})
-	}, [entities])
+	useEffect(() => {
+		if (!areAssetsLoaded && !isLoadingAssets) {
+			loadGameAssets()
+		}
+	}, [
+		areAssetsLoaded,
+		isLoadingAssets,
+	])
 
 	useEffect(() => {
 		pixiApp.resizeTo = resizeToRef.current
 		pixiApp.resize()
+
+		BaseTexture.defaultOptions.scaleMode = SCALE_MODES.NEAREST
 
 		store.set(() => ({
 			viewport: {
@@ -59,10 +65,14 @@ export function Game(props) {
 		resizeToRef,
 	])
 
+	if (isLoadingAssets || !areAssetsLoaded) {
+		return null
+	}
+
 	return (
 		<>
 			<GameBackground />
-			{entitiesComponents}
+			<GameEntities />
 		</>
 	)
 }

@@ -1,10 +1,13 @@
 // Module imports
-import {
-	Container,
-	Graphics,
-} from '@pixi/react'
+import { Container } from '@pixi/react'
 import PropTypes from 'prop-types'
-import { useCallback } from 'react'
+
+
+
+
+
+// Local imports
+import { Fighter } from '../Fighter/Fighter.jsx'
 
 
 
@@ -18,23 +21,11 @@ import { useCallback } from 'react'
 export function Entity(props) {
 	const { entity } = props
 
-	const draw = useCallback(graphics => {
-		graphics.clear()
-
-		graphics.beginFill(entity.color)
-		graphics.drawRect(
-			0,
-			0,
-			entity.size.width,
-			entity.size.height,
-		)
-	}, [entity])
-
 	return (
 		<Container
 			x={entity.position.x}
 			y={entity.position.y}>
-			<Graphics draw={draw} />
+			<Fighter entity={entity} />
 		</Container>
 	)
 }
