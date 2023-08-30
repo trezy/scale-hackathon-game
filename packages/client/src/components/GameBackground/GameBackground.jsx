@@ -2,7 +2,6 @@
 import {
 	Container,
 	Graphics,
-	Sprite,
 	TilingSprite,
 } from '@pixi/react'
 import { Assets } from '@pixi/assets'
