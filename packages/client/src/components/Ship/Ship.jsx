@@ -30,13 +30,14 @@ export function Ship(props) {
 	const {
 		ship,
 		velocity,
+		weapons,
 	} = entity
 
 	const spritesheet = Assets.get(`${ship.species}-ship-${ship.class}`)
 
-	const isMoving = useMemo(() => {
-		return (velocity.x !== 0) || (velocity.y !== 0)
-	}, [
+	const isFiring = useMemo(() => Boolean(weapons?.isFiring), [weapons?.isFiring])
+
+	const isMoving = useMemo(() => (velocity.x !== 0) || (velocity.y !== 0), [
 		velocity.x,
 		velocity.y,
 	])
@@ -51,11 +52,21 @@ export function Ship(props) {
 					textures={spritesheet.animations['engine']} />
 			)}
 
-			<AnimatedSprite
-				anchor={SPRITE_ANCHOR}
-				animationSpeed={ANIMATION_SPEED}
-				isPlaying
-				textures={spritesheet.animations['base']} />
+			{isFiring && (
+				<AnimatedSprite
+					anchor={SPRITE_ANCHOR}
+					animationSpeed={ANIMATION_SPEED}
+					isPlaying
+					textures={spritesheet.animations['weapons']} />
+			)}
+
+			{!isFiring && (
+				<AnimatedSprite
+					anchor={SPRITE_ANCHOR}
+					animationSpeed={ANIMATION_SPEED}
+					isPlaying
+					textures={spritesheet.animations['base']} />
+			)}
 		</Container>
 	)
 }
