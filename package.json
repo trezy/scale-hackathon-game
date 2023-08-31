@@ -6,11 +6,14 @@
     "packages/camera-system",
     "packages/client",
     "packages/controls-system",
+    "packages/entity-utilities",
     "packages/move-system",
     "packages/physics-system",
     "packages/projectile-system",
     "packages/sort-system",
-    "packages/spawn-system"
+    "packages/spawn-system",
+    "packages/static-data",
+    "packages/store"
   ],
   "scripts": {
     "build:client": "yarn build:client",

@@ -1,12 +1,14 @@
 // Local imports
+import {
+	SHIP_CLASS,
+	SPECIES,
+} from 'static-data'
 import { aiComponent } from '../component/aiComponent.js'
 import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'
 import { positionComponent } from '../component/positionComponent.js'
-import { SHIP_CLASS } from '../../data/shipClass.js'
 import { shipComponent } from '../component/shipComponent.js'
 import { sizeComponent } from '../component/sizeComponent.js'
-import { SPECIES } from '../../data/species.js'
 import { velocityComponent } from '../component/velocityComponent.js'
 
 

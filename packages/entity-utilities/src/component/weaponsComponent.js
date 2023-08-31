@@ -13,20 +13,10 @@
 
 
 
-// Constants
-export const WEAPON_TYPES = {
-	GUN: 'gun',
-	MISSILE: 'missile',
-}
-
-
-
-
-
 /**
  * Manages the AI for a computer-controlled entity.
  *
- * @param {Weapon[]} [weapons] An array of weapons to attach to this entity.
+ * @param {Weapon[]} weapons An array of weapons to attach to this entity.
  * @returns {{
  * 	weapons: {
  * 		activeWeapons: Weapon[],

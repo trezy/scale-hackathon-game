@@ -3194,6 +3194,7 @@ __metadata:
     sort-system: "workspace:*"
     spawn-system: "workspace:*"
     statery: ^0.6.3
+    store: "workspace:*"
     uuid: ^9.0.0
   languageName: unknown
   linkType: soft
@@ -3797,6 +3798,15 @@ __metadata:
   checksum: 853f8ebd5b425d350bffa97dd6958143179a5938352ccae092c62d1267c4e392a039be1bae7d51b6e4ffad25f51f9617531fedf5237f15df302ccfb452cbf2d7
   languageName: node
   linkType: hard
+
+"entity-utilities@workspace:*, entity-utilities@workspace:packages/entity-utilities":
+  version: 0.0.0-use.local
+  resolution: "entity-utilities@workspace:packages/entity-utilities"
+  dependencies:
+    static-data: "workspace:*"
+    uuid: ^9.0.0
+  languageName: unknown
+  linkType: soft
 
 "env-paths@npm:^2.2.0":
   version: 2.2.1
@@ -8524,12 +8534,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"statery@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "statery@npm:0.7.1"
+  peerDependencies:
+    react: ">=18.0"
+  peerDependenciesMeta:
+    react:
+      optional: true
+  checksum: 90fb6760268245c782b8ad2ad12aff83ab82017dcfdd1ea32caeaf3c732d554d08cdee803a468c5ad51724c7ca08c6d796bd72af4b6f8088ba63a3734572500b
+  languageName: node
+  linkType: hard
+
+"static-data@workspace:*, static-data@workspace:packages/static-data":
+  version: 0.0.0-use.local
+  resolution: "static-data@workspace:packages/static-data"
+  dependencies:
+    store: "workspace:*"
+  languageName: unknown
+  linkType: soft
+
 "statuses@npm:2.0.1":
   version: 2.0.1
   resolution: "statuses@npm:2.0.1"
   checksum: 18c7623fdb8f646fb213ca4051be4df7efb3484d4ab662937ca6fbef7ced9b9e12842709872eb3020cc3504b93bde88935c9f6417489627a7786f24f8031cbcb
   languageName: node
   linkType: hard
+
+"store@workspace:*, store@workspace:packages/store":
+  version: 0.0.0-use.local
+  resolution: "store@workspace:packages/store"
+  dependencies:
+    entity-utilities: "workspace:*"
+    statery: ^0.7.1
+    static-data: "workspace:*"
+  languageName: unknown
+  linkType: soft
 
 "streamsearch@npm:^1.1.0":
   version: 1.1.0

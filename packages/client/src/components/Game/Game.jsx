@@ -4,6 +4,7 @@ import {
 	SCALE_MODES,
 } from '@pixi/core'
 import PropTypes from 'prop-types'
+import { store } from 'store'
 import { useApp } from '@pixi/react'
 import { useEffect } from 'react'
 import { useStore } from 'statery'
@@ -16,7 +17,6 @@ import { useStore } from 'statery'
 import { GameBackground } from '../GameBackground/GameBackground.jsx'
 import { GameEntities } from '../GameEntities/GameEntities.jsx'
 import { loadGameAssets } from '../../game/loadGameAssets.js'
-import { store } from '../../store/store.js'
 import { useGameLoop } from '../../hooks/useGameLoop.js'
 
 

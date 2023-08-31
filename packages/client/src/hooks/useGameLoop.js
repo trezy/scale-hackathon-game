@@ -7,14 +7,8 @@ import { aiSystem } from 'ai-system'
 import { moveSystem } from 'move-system'
 import { projectileSystem } from 'projectile-system'
 import { sortSystem } from 'sort-system'
+import { store } from 'store'
 import { useTick } from '@pixi/react'
-
-
-
-
-
-// Local imports
-import { store } from '../store/store.js'
 
 
 

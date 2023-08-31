@@ -1,7 +1,9 @@
 // Local imports
-import { CONTROL_TYPES } from './controlTypes.js'
-import { getPlayer } from '../store/reducers/getPlayer.js'
-import { store } from '../store/store.js'
+import {
+	getPlayer,
+	store,
+} from 'store'
+import { CONTROL_TYPES } from './CONTROL_TYPES.js'
 
 
 

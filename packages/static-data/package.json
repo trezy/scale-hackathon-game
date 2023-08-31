@@ -1,0 +1,9 @@
+{
+	"name": "static-data",
+	"version": "0.0.0-development",
+	"main": "src/index.js",
+	"private": true,
+	"dependencies": {
+		"store": "workspace:*"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "store",
+	"version": "0.0.0-development",
+	"main": "src/index.js",
+	"private": true,
+	"dependencies": {
+		"entity-utilities": "workspace:*",
+		"statery": "^0.7.1",
+		"static-data": "workspace:*"
+	}
+}

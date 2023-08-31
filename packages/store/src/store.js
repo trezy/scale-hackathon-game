@@ -6,10 +6,12 @@ import { makeStore } from 'statery'
 
 
 // Local imports
-import { CONTROL_BINDINGS } from '../data/controlBindings.js'
-import { createEnemy } from '../game/entity/createEnemy.js'
-import { createPlayer } from '../game/entity/createPlayer.js'
-import { generateInitialControlState } from '../helpers/generateInitialControlState.js'
+import {
+	createEnemy,
+	createPlayer,
+} from 'entity-utilities'
+import { CONTROL_BINDINGS } from 'static-data'
+import { generateInitialControlState } from './helpers/generateInitialControlState.js'
 
 
 
@@ -57,3 +59,9 @@ export const store = makeStore({
 		width: 0,
 	},
 })
+
+if (typeof window !== 'undefined') {
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore
+	window.store = store
+}

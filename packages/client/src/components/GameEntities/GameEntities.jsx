@@ -1,4 +1,5 @@
 // Module imports
+import { store } from 'store'
 import { useMemo } from 'react'
 import { useStore } from 'statery'
 
@@ -8,7 +9,6 @@ import { useStore } from 'statery'
 
 // Local imports
 import { Entity } from '../Entity/Entity.jsx'
-import { store } from '../../store/store.js'
 import { useGameLoop } from '../../hooks/useGameLoop.js'
 
 

@@ -1,6 +1,7 @@
 // Module imports
 import '@pixi/spritesheet'
 import { Assets } from '@pixi/assets'
+import { store } from 'store'
 
 
 
@@ -8,7 +9,6 @@ import { Assets } from '@pixi/assets'
 
 // Local imports
 import { ASSET_MANIFEST } from './ASSET_MANIFEST.js'
-import { store } from '../store/store.js'
 
 
 

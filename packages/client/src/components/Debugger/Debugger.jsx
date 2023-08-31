@@ -1,4 +1,8 @@
 // Module imports
+import {
+	getPlayer,
+	store,
+} from 'store'
 import { useStore } from 'statery'
 
 
@@ -6,9 +10,6 @@ import { useStore } from 'statery'
 
 
 // Local imports
-import { getPlayer } from '../../store/reducers/getPlayer.js'
-import { store } from '../../store/store.js'
-
 import styles from './Debugger.module.scss'
 
 
