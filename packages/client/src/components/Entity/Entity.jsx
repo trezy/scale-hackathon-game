@@ -7,8 +7,7 @@ import PropTypes from 'prop-types'
 
 
 // Local imports
-import { Battlecruiser } from '../Battlecruiser/Battlecruiser.jsx'
-import { Fighter } from '../Fighter/Fighter.jsx'
+import { Ship } from '../Ship/Ship.jsx'
 
 
 
@@ -27,12 +26,8 @@ export function Entity(props) {
 			x={entity.position.x}
 			y={entity.position.y}>
 			{/* <Graphics draw={draw} /> */}
-			{entity.isPlayer && (
-				<Fighter entity={entity} />
-			)}
-
-			{!entity.isPlayer && (
-				<Battlecruiser entity={entity} />
+			{Boolean(entity.ship) && (
+				<Ship entity={entity} />
 			)}
 		</Container>
 	)

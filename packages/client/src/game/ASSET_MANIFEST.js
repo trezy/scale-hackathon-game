@@ -1,15 +1,15 @@
 export const ASSET_MANIFEST = {
 	bundles: [
 		{
-			name: 'ship',
+			name: 'solarian',
 			assets: [
 				{
 					name: 'fighter',
-					srcs: '/sprites/ships/team1/fighter.json',
+					srcs: '/sprites/ships/solarian/fighter.json',
 				},
 				{
 					name: 'battlecruiser',
-					srcs: '/sprites/ships/team1/battlecruiser.json',
+					srcs: '/sprites/ships/solarian/battlecruiser.json',
 				},
 			],
 		},

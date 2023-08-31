@@ -32,32 +32,36 @@ const SPRITE_ANCHOR = [0.5, 0.5]
 
 
 /**
- * Renders sprites for a Battlecruiser.
+ * Renders sprites for a ship.
  *
  * @component
  */
-export function Battlecruiser(props) {
+export function Ship(props) {
 	const { entity } = props
+	const {
+		ship,
+		velocity,
+	} = entity
 
 	const [rotation, setRotation] = useState(getEntityRotation(entity))
 
-	const spritesheet = Assets.get('battlecruiser')
+	const spritesheet = Assets.get(`${ship.species}-${ship.class}`)
 
 	const isMoving = useMemo(() => {
-		return (entity.velocity.x !== 0) || (entity.velocity.y !== 0)
+		return (velocity.x !== 0) || (velocity.y !== 0)
 	}, [
-		entity.velocity.x,
-		entity.velocity.y,
+		velocity.x,
+		velocity.y,
 	])
 
 	useEffect(() => {
-		if ((entity.velocity.x !== 0) || (entity.velocity.y !== 0)) {
+		if ((velocity.x !== 0) || (velocity.y !== 0)) {
 			setRotation(getEntityRotation(entity))
 		}
 	}, [
 		entity,
-		entity.velocity.x,
-		entity.velocity.y,
+		velocity.x,
+		velocity.y,
 		setRotation,
 	])
 
@@ -80,6 +84,6 @@ export function Battlecruiser(props) {
 	)
 }
 
-Battlecruiser.propTypes = {
+Ship.propTypes = {
 	entity: PropTypes.object.isRequired,
 }
