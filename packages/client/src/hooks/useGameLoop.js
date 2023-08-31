@@ -4,8 +4,8 @@ import {
 	useControlsSystem,
 } from 'controls-system'
 import { aiSystem } from 'ai-system'
-import { bulletSystem } from 'bullet-system'
 import { moveSystem } from 'move-system'
+import { projectileSystem } from 'projectile-system'
 import { sortSystem } from 'sort-system'
 import { useTick } from '@pixi/react'
 
@@ -28,12 +28,13 @@ export function useGameLoop() {
 		store.set(() => ({
 			delta,
 			deltaMS: ticker.deltaMS,
+			lastTick: ticker.lastTime,
 		}))
 
 		controlsSystem(store)
 		moveSystem(store)
 		aiSystem(store)
-		bulletSystem(store)
+		projectileSystem(store)
 		sortSystem(store)
 	})
 

@@ -2928,15 +2928,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bullet-system@workspace:*, bullet-system@workspace:packages/bullet-system":
-  version: 0.0.0-use.local
-  resolution: "bullet-system@workspace:packages/bullet-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-  languageName: unknown
-  linkType: soft
-
 "busboy@npm:1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
@@ -3184,7 +3175,6 @@ __metadata:
     "@types/react": ^18.2.21
     ai-system: "workspace:*"
     better-docs: ^2.7.2
-    bullet-system: "workspace:*"
     camera-system: "workspace:*"
     controls-system: "workspace:*"
     eslint-plugin-jsx-a11y: ^6.7.1
@@ -3196,6 +3186,7 @@ __metadata:
     next: ^13.4.19
     physics-system: "workspace:*"
     pixi.js: ^7.2.4
+    projectile-system: "workspace:*"
     prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7527,6 +7518,15 @@ __metadata:
   checksum: a00abd713d25389f6de7294f0e7879b8a5d09a9ec5fd81cc2f21b29d4f9a80ec53bc4222927d3a281d4aadd4cd373d9a28726fca3935921950dc75fd71d1fdbb
   languageName: node
   linkType: hard
+
+"projectile-system@workspace:*, projectile-system@workspace:packages/projectile-system":
+  version: 0.0.0-use.local
+  resolution: "projectile-system@workspace:packages/projectile-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
 
 "promise-retry@npm:^2.0.1":
   version: 2.0.1

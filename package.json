@@ -3,12 +3,12 @@
   "packageManager": "yarn@3.6.3",
   "workspaces": [
     "packages/ai-system",
-    "packages/bullet-system",
     "packages/camera-system",
     "packages/client",
     "packages/controls-system",
     "packages/move-system",
     "packages/physics-system",
+    "packages/projectile-system",
     "packages/sort-system",
     "packages/spawn-system"
   ],

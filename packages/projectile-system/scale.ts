@@ -5,6 +5,6 @@ import { GuestContext } from '@loopholelabs/scale-signature-http'
  *
  * @param {GuestContext} ctx Context passed in from the host.
  */
-export function bulletSystem(ctx: GuestContext) {
+export function projectileSystem(ctx: GuestContext) {
 	ctx.Response.SetBody('Hello, World!')
 }

@@ -49,6 +49,9 @@ export const store = makeStore({
 
 	isInitialising: false,
 
+	/** @type {null | number} */
+	lastTick: null,
+
 	viewport: {
 		height: 0,
 		width: 0,

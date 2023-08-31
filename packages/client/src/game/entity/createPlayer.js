@@ -26,9 +26,10 @@ export function createPlayer() {
 		sizeComponent(20, 20),
 		velocityComponent(0, 0),
 		weaponsComponent({
-			damage: 1,
-			delay: 100,
-			direction: 0,
+			firingDelay: 100,
+			projectileDamage: 1,
+			projectileDirection: 0,
+			projectileSpeed: 10,
 			type: WEAPON_TYPES.GUN,
 		}),
 	)
