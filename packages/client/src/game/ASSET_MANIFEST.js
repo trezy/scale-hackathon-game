@@ -1,7 +1,32 @@
 export const ASSET_MANIFEST = {
 	bundles: [
 		{
-			name: 'solarian',
+			name: 'solarian-projectile',
+			assets: [
+				{
+					name: 'big-bullet',
+					srcs: '/sprites/species/solarian/projectiles/big-bullet.json',
+				},
+				{
+					name: 'bullet',
+					srcs: '/sprites/species/solarian/projectiles/bullet.json',
+				},
+				{
+					name: 'missile',
+					srcs: '/sprites/species/solarian/projectiles/missile.json',
+				},
+				{
+					name: 'ray',
+					srcs: '/sprites/species/solarian/projectiles/ray.json',
+				},
+				{
+					name: 'wave',
+					srcs: '/sprites/species/solarian/projectiles/wave.json',
+				},
+			],
+		},
+		{
+			name: 'solarian-ship',
 			assets: [
 				{
 					name: 'fighter',

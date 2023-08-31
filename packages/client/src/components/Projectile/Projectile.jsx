@@ -5,7 +5,6 @@ import {
 } from '@pixi/react'
 import {
 	useEffect,
-	useMemo,
 	useState,
 } from 'react'
 import { Assets } from '@pixi/assets'
@@ -36,23 +35,16 @@ const SPRITE_ANCHOR = [0.5, 0.5]
  *
  * @component
  */
-export function Ship(props) {
+export function Projectile(props) {
 	const { entity } = props
 	const {
-		ship,
+		projectile,
 		velocity,
 	} = entity
 
 	const [rotation, setRotation] = useState(getEntityRotation(entity))
 
-	const spritesheet = Assets.get(`${ship.species}-ship-${ship.class}`)
-
-	const isMoving = useMemo(() => {
-		return (velocity.x !== 0) || (velocity.y !== 0)
-	}, [
-		velocity.x,
-		velocity.y,
-	])
+	const spritesheet = Assets.get(`${projectile.species}-projectile-${projectile.type}`)
 
 	useEffect(() => {
 		if ((velocity.x !== 0) || (velocity.y !== 0)) {
@@ -67,23 +59,15 @@ export function Ship(props) {
 
 	return (
 		<Container rotation={rotation}>
-			{isMoving && (
-				<AnimatedSprite
-					anchor={SPRITE_ANCHOR}
-					animationSpeed={ANIMATION_SPEED}
-					isPlaying
-					textures={spritesheet.animations['engine']} />
-			)}
-
 			<AnimatedSprite
 				anchor={SPRITE_ANCHOR}
 				animationSpeed={ANIMATION_SPEED}
 				isPlaying
-				textures={spritesheet.animations['base']} />
+				textures={spritesheet.animations['fly']} />
 		</Container>
 	)
 }
 
-Ship.propTypes = {
+Projectile.propTypes = {
 	entity: PropTypes.object.isRequired,
 }

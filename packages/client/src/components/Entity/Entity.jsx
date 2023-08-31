@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 
 
 // Local imports
+import { Projectile } from '../Projectile/Projectile.jsx'
 import { Ship } from '../Ship/Ship.jsx'
 
 
@@ -26,6 +27,9 @@ export function Entity(props) {
 			x={entity.position.x}
 			y={entity.position.y}>
 			{/* <Graphics draw={draw} /> */}
+			{Boolean(entity.projectile) && (
+				<Projectile entity={entity} />
+			)}
 			{Boolean(entity.ship) && (
 				<Ship entity={entity} />
 			)}

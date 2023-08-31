@@ -26,6 +26,10 @@ export function projectileSystem(store) {
 									accumulator.push({
 										isProjectile: true,
 										position: { ...entity.position },
+										projectile: {
+											species: 'solarian',
+											type: 'bullet',
+										},
 										velocity: {
 											x: Math.sign(entity.velocity.x) * weapon.projectileSpeed,
 											y: Math.sign(entity.velocity.y) * weapon.projectileSpeed,
