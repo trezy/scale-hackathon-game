@@ -5,11 +5,11 @@ export const ASSET_MANIFEST = {
 			assets: [
 				{
 					name: 'fighter',
-					srcs: '/sprites/ships/solarian/fighter.json',
+					srcs: '/sprites/species/solarian/ships/fighter.json',
 				},
 				{
 					name: 'battlecruiser',
-					srcs: '/sprites/ships/solarian/battlecruiser.json',
+					srcs: '/sprites/species/solarian/ships/battlecruiser.json',
 				},
 			],
 		},
