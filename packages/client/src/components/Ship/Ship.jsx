@@ -3,20 +3,9 @@ import {
 	AnimatedSprite,
 	Container,
 } from '@pixi/react'
-import {
-	useEffect,
-	useMemo,
-	useState,
-} from 'react'
 import { Assets } from '@pixi/assets'
 import PropTypes from 'prop-types'
-
-
-
-
-
-// Local imports
-import { getEntityRotation } from '../../helpers/getEntityRotation.js'
+import { useMemo } from 'react'
 
 
 
@@ -43,8 +32,6 @@ export function Ship(props) {
 		velocity,
 	} = entity
 
-	const [rotation, setRotation] = useState(getEntityRotation(entity))
-
 	const spritesheet = Assets.get(`${ship.species}-ship-${ship.class}`)
 
 	const isMoving = useMemo(() => {
@@ -54,19 +41,8 @@ export function Ship(props) {
 		velocity.y,
 	])
 
-	useEffect(() => {
-		if ((velocity.x !== 0) || (velocity.y !== 0)) {
-			setRotation(getEntityRotation(entity))
-		}
-	}, [
-		entity,
-		velocity.x,
-		velocity.y,
-		setRotation,
-	])
-
 	return (
-		<Container rotation={rotation}>
+		<Container rotation={entity.rotation}>
 			{isMoving && (
 				<AnimatedSprite
 					anchor={SPRITE_ANCHOR}

@@ -3804,6 +3804,7 @@ __metadata:
   resolution: "entity-utilities@workspace:packages/entity-utilities"
   dependencies:
     static-data: "workspace:*"
+    utilities: "workspace:*"
     uuid: ^9.0.0
   languageName: unknown
   linkType: soft
@@ -6807,6 +6808,7 @@ __metadata:
   dependencies:
     "@loopholelabs/scale-signature": 0.2.11
     "@loopholelabs/scale-signature-http": 0.3.8
+    utilities: "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -9342,6 +9344,12 @@ __metadata:
   checksum: 705e51f0de5b446f4edec10739752ac25856541e0254ea1e7e45e5b9f9b0cb105bc4bd415736a6210edc68245a7f903bf085ffb08dd7deb8a0e847f60538a38a
   languageName: node
   linkType: hard
+
+"utilities@workspace:*, utilities@workspace:packages/utilities":
+  version: 0.0.0-use.local
+  resolution: "utilities@workspace:packages/utilities"
+  languageName: unknown
+  linkType: soft
 
 "utils-merge@npm:1.0.1":
   version: 1.0.1

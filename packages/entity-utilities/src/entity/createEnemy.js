@@ -7,6 +7,7 @@ import { aiComponent } from '../component/aiComponent.js'
 import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'
 import { positionComponent } from '../component/positionComponent.js'
+import { rotationComponent } from '../component/rotationComponent.js'
 import { shipComponent } from '../component/shipComponent.js'
 import { sizeComponent } from '../component/sizeComponent.js'
 import { velocityComponent } from '../component/velocityComponent.js'
@@ -29,6 +30,7 @@ export function createEnemy(x, y, width, height) {
 		aiComponent(),
 		colorComponent(0xff0000),
 		positionComponent(x, y),
+		rotationComponent(0),
 		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.BATTLECRUISER),
 		sizeComponent(width, height),
 		velocityComponent(0, 0),

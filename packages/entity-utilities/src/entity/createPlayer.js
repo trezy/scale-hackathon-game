@@ -8,6 +8,7 @@ import {
 import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'
 import { positionComponent } from '../component/positionComponent.js'
+import { rotationComponent } from '../component/rotationComponent.js'
 import { shipComponent } from '../component/shipComponent.js'
 import { sizeComponent } from '../component/sizeComponent.js'
 import { velocityComponent } from '../component/velocityComponent.js'
@@ -27,6 +28,7 @@ export function createPlayer() {
 		{ isPlayer: true },
 		colorComponent(0x0000ff),
 		positionComponent(0, 0),
+		rotationComponent(0),
 		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.FIGHTER),
 		sizeComponent(20, 20),
 		velocityComponent(0, 0),

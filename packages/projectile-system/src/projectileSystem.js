@@ -30,15 +30,7 @@ export function projectileSystem(store) {
 						if ((lastTick - weapon.firingDelay) > weapon.lastFired) {
 							switch (weapon.type) {
 								case 'gun':
-									accumulator.push(createProjectile({
-										position: entity.position,
-										species: entity.ship.species,
-										type: weapon.projectileType,
-										velocity: {
-											x: Math.sign(entity.velocity.x) * weapon.projectileSpeed,
-											y: Math.sign(entity.velocity.y) * weapon.projectileSpeed,
-										},
-									}))
+									accumulator.push(createProjectile(entity, weapon))
 									break
 
 								default:

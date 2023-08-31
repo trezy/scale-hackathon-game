@@ -1,3 +1,10 @@
+// Module imports
+import { getRotationFromVector } from 'utilities'
+
+
+
+
+
 /**
  * Moves entities based on their velocity.
  *
@@ -12,9 +19,13 @@ export function moveSystem(store) {
 
 		return {
 			entities: entities.map(entity => {
-				if (entity.velocity) {
+				if ('velocity' in entity) {
 					entity.position.x += entity.velocity.x * delta
 					entity.position.y += entity.velocity.y * delta
+
+					if (('rotation' in entity) && ((entity.velocity.x !== 0) || (entity.velocity.y !== 0))) {
+						entity.rotation = getRotationFromVector(entity.velocity.x, entity.velocity.y)
+					}
 				}
 
 				return entity

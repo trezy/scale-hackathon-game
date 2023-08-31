@@ -1,0 +1,6 @@
+{
+	"name": "utilities",
+	"version": "0.0.0-development",
+	"main": "src/index.js",
+	"private": true
+}

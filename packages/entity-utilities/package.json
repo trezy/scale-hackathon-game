@@ -5,6 +5,7 @@
 	"private": true,
 	"dependencies": {
 		"static-data": "workspace:*",
+		"utilities": "workspace:*",
 		"uuid": "^9.0.0"
 	}
 }

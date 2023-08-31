@@ -13,7 +13,8 @@
     "packages/sort-system",
     "packages/spawn-system",
     "packages/static-data",
-    "packages/store"
+    "packages/store",
+    "packages/utilities"
   ],
   "scripts": {
     "build:client": "yarn build:client",
