@@ -4,6 +4,7 @@ import {
 	useControlsSystem,
 } from 'controls-system'
 import { aiSystem } from 'ai-system'
+import { cullSystem } from 'cull-system'
 import { moveSystem } from 'move-system'
 import { projectileSystem } from 'projectile-system'
 import { sortSystem } from 'sort-system'
@@ -29,6 +30,7 @@ export function useGameLoop() {
 		moveSystem(store)
 		aiSystem(store)
 		projectileSystem(store)
+		cullSystem(store)
 		sortSystem(store)
 	})
 

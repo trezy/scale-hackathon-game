@@ -19,6 +19,7 @@
     "ai-system": "workspace:*",
     "camera-system": "workspace:*",
     "controls-system": "workspace:*",
+    "cull-system": "workspace:*",
     "move-system": "workspace:*",
     "next": "^13.4.19",
     "physics-system": "workspace:*",

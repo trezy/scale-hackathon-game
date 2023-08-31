@@ -1,0 +1,11 @@
+version: v1alpha
+name: cull-system
+tag: latest
+signature: http@v0.3.8
+language: ts
+dependencies:
+  - name: '@loopholelabs/scale-signature-http'
+    version: 0.3.8
+  - name: '@loopholelabs/scale-signature'
+    version: 0.2.11
+source: scale.ts
