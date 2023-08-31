@@ -1,3 +1,10 @@
+// Module imports
+import { v4 as uuid } from 'uuid'
+
+
+
+
+
 /**
  * Spawns new weapon projectiles.
  *
@@ -24,7 +31,7 @@ export function projectileSystem(store) {
 							switch (weapon.type) {
 								case 'gun':
 									accumulator.push({
-										isProjectile: true,
+										id: uuid(),
 										position: { ...entity.position },
 										projectile: {
 											species: 'solarian',

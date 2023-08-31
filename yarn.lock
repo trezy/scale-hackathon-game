@@ -7525,6 +7525,7 @@ __metadata:
   dependencies:
     "@loopholelabs/scale-signature": 0.2.11
     "@loopholelabs/scale-signature-http": 0.3.8
+    uuid: ^9.0.0
   languageName: unknown
   linkType: soft
 
