@@ -1,5 +1,5 @@
 /**
- * Sets the ship type of an entity.
+ * Manages the ship type of an entity.
  *
  * @param {string} species The species of the entity ship.
  * @param {string} shipClass The class of the entity ship.

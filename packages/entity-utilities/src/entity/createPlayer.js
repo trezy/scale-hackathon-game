@@ -1,5 +1,6 @@
 // Local imports
 import {
+	PROJECTILE_TYPES,
 	SHIP_CLASS,
 	SPECIES,
 	WEAPON_TYPES,
@@ -34,6 +35,7 @@ export function createPlayer() {
 			projectileDamage: 1,
 			projectileDirection: 0,
 			projectileSpeed: 10,
+			projectileType: PROJECTILE_TYPES.BULLET,
 			type: WEAPON_TYPES.GUN,
 		}),
 	)

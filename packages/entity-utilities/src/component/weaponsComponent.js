@@ -6,6 +6,7 @@
  * @property {number} projectileDamage The amount of damage the weapon's projectiles will do.
  * @property {number} projectileDirection The angle offset for the weapon fire.
  * @property {number} projectileSpeed The speed of projectiles from this weapon.
+ * @property {string} projectileType The type of projectiles from this weapon.
  * @property {string} type The type of weapon.
  */
 
