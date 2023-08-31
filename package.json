@@ -3,6 +3,7 @@
   "packageManager": "yarn@3.6.3",
   "workspaces": [
     "packages/ai-system",
+    "packages/bullet-system",
     "packages/camera-system",
     "packages/client",
     "packages/controls-system",

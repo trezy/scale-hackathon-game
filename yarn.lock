@@ -2928,6 +2928,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bullet-system@workspace:*, bullet-system@workspace:packages/bullet-system":
+  version: 0.0.0-use.local
+  resolution: "bullet-system@workspace:packages/bullet-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
+
 "busboy@npm:1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
@@ -3175,6 +3184,7 @@ __metadata:
     "@types/react": ^18.2.21
     ai-system: "workspace:*"
     better-docs: ^2.7.2
+    bullet-system: "workspace:*"
     camera-system: "workspace:*"
     controls-system: "workspace:*"
     eslint-plugin-jsx-a11y: ^6.7.1

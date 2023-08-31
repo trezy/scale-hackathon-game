@@ -1,0 +1,10 @@
+{
+	"name": "bullet-system",
+	"version": "0.0.0-development",
+	"main": "src/index.js",
+	"private": true,
+	"dependencies": {
+		"@loopholelabs/scale-signature": "0.2.11",
+		"@loopholelabs/scale-signature-http": "0.3.8"
+	}
+}

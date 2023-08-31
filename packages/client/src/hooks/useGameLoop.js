@@ -4,6 +4,7 @@ import {
 	useControlsSystem,
 } from 'controls-system'
 import { aiSystem } from 'ai-system'
+import { bulletSystem } from 'bullet-system'
 import { moveSystem } from 'move-system'
 import { sortSystem } from 'sort-system'
 import { useTick } from '@pixi/react'
@@ -32,6 +33,7 @@ export function useGameLoop() {
 		controlsSystem(store)
 		moveSystem(store)
 		aiSystem(store)
+		bulletSystem(store)
 		sortSystem(store)
 	})
 

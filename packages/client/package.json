@@ -17,6 +17,7 @@
     "@loopholelabs/scale-http-adapters": "^0.3.9",
     "@pixi/react": "^7.1.0",
     "ai-system": "workspace:*",
+    "bullet-system": "workspace:*",
     "camera-system": "workspace:*",
     "controls-system": "workspace:*",
     "move-system": "workspace:*",
