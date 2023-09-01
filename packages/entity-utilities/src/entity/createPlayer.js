@@ -32,13 +32,32 @@ export function createPlayer() {
 		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.FIGHTER),
 		sizeComponent(20, 20),
 		velocityComponent(0, 0),
-		weaponsComponent({
-			firingDelay: 100,
-			projectileDamage: 1,
-			projectileDirection: 0,
-			projectileSpeed: 10,
-			projectileType: PROJECTILE_TYPES.BULLET,
-			type: WEAPON_TYPES.GUN,
-		}),
+		weaponsComponent(
+			{
+				firingDelay: 850,
+				projectileDamage: 1,
+				projectileDirection: 0,
+				projectileOffset: {
+					x: -10,
+					y: 20,
+				},
+				projectileSpeed: 10,
+				projectileType: PROJECTILE_TYPES.BULLET,
+				type: WEAPON_TYPES.GUN,
+			},
+			{
+				firingDelay: 850,
+				initialDelay: 300,
+				projectileDamage: 1,
+				projectileDirection: 0,
+				projectileOffset: {
+					x: 10,
+					y: 20,
+				},
+				projectileSpeed: 10,
+				projectileType: PROJECTILE_TYPES.BULLET,
+				type: WEAPON_TYPES.GUN,
+			},
+		),
 	)
 }

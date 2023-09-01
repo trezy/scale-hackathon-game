@@ -31,7 +31,10 @@ export function createProjectile(parentEntity, weapon) {
 	const velocity = getVectorFromRotation(rotation)
 
 	return createEntity(
-		positionComponent(position.x, position.y),
+		positionComponent(
+			position.x + weapon.projectileOffset.x,
+			position.y + weapon.projectileOffset.y,
+		),
 		projectileComponent(species, weapon.projectileType),
 		rotationComponent(rotation),
 		velocityComponent(

@@ -36,7 +36,6 @@ export function Ship(props) {
 	const spritesheet = Assets.get(`${ship.species}-ship-${ship.class}`)
 
 	const isFiring = useMemo(() => Boolean(weapons?.isFiring), [weapons?.isFiring])
-
 	const isMoving = useMemo(() => (velocity.x !== 0) || (velocity.y !== 0), [
 		velocity.x,
 		velocity.y,

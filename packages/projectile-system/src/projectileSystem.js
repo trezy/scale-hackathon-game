@@ -27,7 +27,11 @@ export function projectileSystem(store) {
 
 				if (isFiring) {
 					activeWeapons.forEach(weapon => {
-						if ((lastTick - weapon.firingDelay) > weapon.lastFired) {
+						if (!weapon.lastFired && ('initialDelay' in weapon) && (weapon.initialDelay > 0)) {
+							weapon.lastFired = lastTick + weapon.initialDelay - weapon.firingDelay
+						}
+
+						if ((lastTick - weapon.firingDelay) >= weapon.lastFired) {
 							switch (weapon.type) {
 								case 'gun':
 									accumulator.push(createProjectile(entity, weapon))
@@ -38,6 +42,10 @@ export function projectileSystem(store) {
 
 							weapon.lastFired = lastTick
 						}
+					})
+				} else {
+					activeWeapons.forEach(weapon => {
+						weapon.lastFired = null
 					})
 				}
 
