@@ -2,20 +2,7 @@
   "private": true,
   "packageManager": "yarn@4.0.0-rc.50",
   "workspaces": [
-    "packages/ai-system",
-    "packages/camera-system",
-    "packages/client",
-    "packages/controls-system",
-    "packages/cull-system",
-    "packages/entity-utilities",
-    "packages/move-system",
-    "packages/physics-system",
-    "packages/projectile-system",
-    "packages/sort-system",
-    "packages/spawn-system",
-    "packages/static-data",
-    "packages/store",
-    "packages/utilities"
+    "packages/*"
   ],
   "scripts": {
     "build:client": "yarn build:client",
