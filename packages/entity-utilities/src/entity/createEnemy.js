@@ -1,9 +1,16 @@
-// Local imports
+// Module imports
 import {
 	SHIP_CLASS,
 	SPECIES,
 } from '@space-game/static-data'
+
+
+
+
+
+// Local imports
 import { aiComponent } from '../component/aiComponent.js'
+import { colliderComponent } from '../component/colliderComponent.js'
 import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'
 import { positionComponent } from '../component/positionComponent.js'
@@ -28,6 +35,14 @@ import { velocityComponent } from '../component/velocityComponent.js'
 export function createEnemy(x, y, width, height) {
 	return createEntity(
 		aiComponent(),
+		colliderComponent(/*{
+			height,
+			position: {
+				x,
+				y,
+			},
+			width,
+		}*/),
 		colorComponent(0xff0000),
 		positionComponent(x, y),
 		rotationComponent(0),
