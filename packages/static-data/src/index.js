@@ -1,5 +1,6 @@
 export * from './CONTROL_BINDINGS.js'
 export * from './CONTROL_TYPES.js'
+export * from './PIXELS_PER_METER.js'
 export * from './PROJECTILE_TYPES.js'
 export * from './SHIP_CLASS.js'
 export * from './SPECIES.js'

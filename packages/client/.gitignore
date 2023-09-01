@@ -3,4 +3,5 @@
 .env.local
 .next
 next-env.d.ts
+public/assets/
 .vercel/

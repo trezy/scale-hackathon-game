@@ -22,14 +22,9 @@ export async function loadGameAssets() {
 
 	const bundleNames = ASSET_MANIFEST.bundles.map(bundle => bundle.name)
 
-	store.set(() => ({ isInitialising: true }))
-
 	await Assets.init({ manifest: ASSET_MANIFEST })
 
-	store.set(() => ({
-		isLoadingAssets: true,
-		isInitialising: false,
-	}))
+	store.set(() => ({ isLoadingAssets: true }))
 
 	let bundleIndex = 0
 
@@ -61,7 +56,5 @@ export async function loadGameAssets() {
 		isLoadingAssets: false,
 	}))
 
-	store.set(() => ({
-		areAssetsLoaded: true,
-	}))
+	store.set(() => ({ areAssetsLoaded: true }))
 }

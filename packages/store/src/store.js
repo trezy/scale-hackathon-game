@@ -49,10 +49,18 @@ export const store = makeStore({
 
 	isLoadingAssets: false,
 
-	isInitialising: false,
+	isInitialized: false,
+
+	isInitializing: false,
 
 	/** @type {null | number} */
 	lastTick: null,
+
+	/** @type {null | import('@dimforge/rapier2d-compat').World} */
+	physicsWorld: null,
+
+	/** @type {null | import('@dimforge/rapier2d-compat').EventQueue} */
+	physicsEvents: null,
 
 	viewport: {
 		height: 0,

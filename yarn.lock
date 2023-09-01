@@ -445,6 +445,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dimforge/rapier2d-compat@npm:^0.11.2":
+  version: 0.11.2
+  resolution: "@dimforge/rapier2d-compat@npm:0.11.2"
+  checksum: f78b4303f77da7926ed97f3f3e6c556d0dbd179ab8551309c1df5f10803683192c89a5a0180e2f2c68c72b8375ac87e3b27e7879df3f6b385f135fbf1e3f98ef
+  languageName: node
+  linkType: hard
+
 "@edge-runtime/format@npm:2.2.0":
   version: 2.2.0
   resolution: "@edge-runtime/format@npm:2.2.0"
@@ -3168,6 +3175,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "client@workspace:packages/client"
   dependencies:
+    "@dimforge/rapier2d-compat": ^0.11.2
     "@loopholelabs/scale": ^0.3.19
     "@loopholelabs/scale-http-adapters": ^0.3.9
     "@next/eslint-plugin-next": ^13.4.19
@@ -3813,6 +3821,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "entity-utilities@workspace:packages/entity-utilities"
   dependencies:
+    "@dimforge/rapier2d-compat": ^0.11.2
     static-data: "workspace:*"
     utilities: "workspace:*"
     uuid: ^9.0.0

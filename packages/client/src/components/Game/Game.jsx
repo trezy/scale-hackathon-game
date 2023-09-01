@@ -16,7 +16,7 @@ import { useStore } from 'statery'
 // Local imports
 import { GameBackground } from '../GameBackground/GameBackground.jsx'
 import { GameEntities } from '../GameEntities/GameEntities.jsx'
-import { loadGameAssets } from '../../game/loadGameAssets.js'
+import { initialize } from '../../game/initialize.js'
 import { useGameLoop } from '../../hooks/useGameLoop.js'
 
 
@@ -31,8 +31,8 @@ import { useGameLoop } from '../../hooks/useGameLoop.js'
 export function Game(props) {
 	const { resizeToRef } = props
 	const {
-		areAssetsLoaded,
-		isLoadingAssets,
+		isInitialized,
+		isInitializing,
 	} = useStore(store)
 
 	const pixiApp = useApp()
@@ -40,12 +40,12 @@ export function Game(props) {
 	useGameLoop()
 
 	useEffect(() => {
-		if (!areAssetsLoaded && !isLoadingAssets) {
-			loadGameAssets()
+		if (!isInitialized && !isInitializing) {
+			initialize()
 		}
 	}, [
-		areAssetsLoaded,
-		isLoadingAssets,
+		isInitialized,
+		isInitializing,
 	])
 
 	useEffect(() => {
@@ -65,7 +65,7 @@ export function Game(props) {
 		resizeToRef,
 	])
 
-	if (isLoadingAssets || !areAssetsLoaded) {
+	if (!isInitialized) {
 		return null
 	}
 
