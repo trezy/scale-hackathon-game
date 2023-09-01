@@ -2,7 +2,7 @@
 import {
 	getPlayer,
 	store,
-} from 'store'
+} from '@space-game/store'
 import { CONTROL_TYPES } from './CONTROL_TYPES.js'
 
 

@@ -5,7 +5,7 @@ import {
 	TilingSprite,
 } from '@pixi/react'
 import { Assets } from '@pixi/assets'
-import { store } from 'store'
+import { store } from '@space-game/store'
 import { useCallback } from 'react'
 import { useStore } from 'statery'
 

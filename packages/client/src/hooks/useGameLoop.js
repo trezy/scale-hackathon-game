@@ -2,13 +2,13 @@
 import {
 	controlsSystem,
 	useControlsSystem,
-} from 'controls-system'
-import { aiSystem } from 'ai-system'
-import { cullSystem } from 'cull-system'
-import { moveSystem } from 'move-system'
-import { projectileSystem } from 'projectile-system'
-import { sortSystem } from 'sort-system'
-import { store } from 'store'
+} from '@space-game/controls-system'
+import { aiSystem } from '@space-game/ai-system'
+import { cullSystem } from '@space-game/cull-system'
+import { moveSystem } from '@space-game/move-system'
+import { projectileSystem } from '@space-game/projectile-system'
+import { sortSystem } from '@space-game/sort-system'
+import { store } from '@space-game/store'
 import { useTick } from '@pixi/react'
 
 

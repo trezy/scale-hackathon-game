@@ -1,5 +1,5 @@
 {
-	"name": "sort-system",
+	"name": "@space-game/sort-system",
 	"version": "0.0.0-development",
 	"main": "src/index.js",
 	"private": true,

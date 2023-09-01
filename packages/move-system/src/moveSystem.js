@@ -1,5 +1,5 @@
 // Module imports
-import { getRotationFromVector } from 'utilities'
+import { getRotationFromVector } from '@space-game/utilities'
 
 
 

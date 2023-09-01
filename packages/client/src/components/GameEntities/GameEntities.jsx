@@ -1,5 +1,5 @@
 // Module imports
-import { store } from 'store'
+import { store } from '@space-game/store'
 import { useMemo } from 'react'
 import { useStore } from 'statery'
 

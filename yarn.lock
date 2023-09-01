@@ -1631,6 +1631,125 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@space-game/ai-system@workspace:*, @space-game/ai-system@workspace:packages/ai-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/ai-system@workspace:packages/ai-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
+
+"@space-game/camera-system@workspace:*, @space-game/camera-system@workspace:packages/camera-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/camera-system@workspace:packages/camera-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
+
+"@space-game/controls-system@workspace:*, @space-game/controls-system@workspace:packages/controls-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/controls-system@workspace:packages/controls-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
+
+"@space-game/cull-system@workspace:*, @space-game/cull-system@workspace:packages/cull-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/cull-system@workspace:packages/cull-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
+
+"@space-game/entity-utilities@workspace:*, @space-game/entity-utilities@workspace:packages/entity-utilities":
+  version: 0.0.0-use.local
+  resolution: "@space-game/entity-utilities@workspace:packages/entity-utilities"
+  dependencies:
+    "@dimforge/rapier2d-compat": ^0.11.2
+    "@space-game/static-data": "workspace:*"
+    "@space-game/store": "workspace:*"
+    "@space-game/utilities": "workspace:*"
+    uuid: ^9.0.0
+  languageName: unknown
+  linkType: soft
+
+"@space-game/move-system@workspace:*, @space-game/move-system@workspace:packages/move-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/move-system@workspace:packages/move-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+    "@space-game/utilities": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@space-game/physics-system@workspace:*, @space-game/physics-system@workspace:packages/physics-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/physics-system@workspace:packages/physics-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
+
+"@space-game/projectile-system@workspace:*, @space-game/projectile-system@workspace:packages/projectile-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/projectile-system@workspace:packages/projectile-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+    "@space-game/entity-utilities": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@space-game/sort-system@workspace:*, @space-game/sort-system@workspace:packages/sort-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/sort-system@workspace:packages/sort-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
+
+"@space-game/spawn-system@workspace:*, @space-game/spawn-system@workspace:packages/spawn-system":
+  version: 0.0.0-use.local
+  resolution: "@space-game/spawn-system@workspace:packages/spawn-system"
+  dependencies:
+    "@loopholelabs/scale-signature": 0.2.11
+    "@loopholelabs/scale-signature-http": 0.3.8
+  languageName: unknown
+  linkType: soft
+
+"@space-game/static-data@workspace:*, @space-game/static-data@workspace:packages/static-data":
+  version: 0.0.0-use.local
+  resolution: "@space-game/static-data@workspace:packages/static-data"
+  dependencies:
+    "@space-game/store": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@space-game/store@workspace:*, @space-game/store@workspace:packages/store":
+  version: 0.0.0-use.local
+  resolution: "@space-game/store@workspace:packages/store"
+  dependencies:
+    "@space-game/entity-utilities": "workspace:*"
+    "@space-game/static-data": "workspace:*"
+    statery: ^0.7.1
+  languageName: unknown
+  linkType: soft
+
+"@space-game/utilities@workspace:*, @space-game/utilities@workspace:packages/utilities":
+  version: 0.0.0-use.local
+  resolution: "@space-game/utilities@workspace:packages/utilities"
+  languageName: unknown
+  linkType: soft
+
 "@swc/helpers@npm:0.4.11":
   version: 0.4.11
   resolution: "@swc/helpers@npm:0.4.11"
@@ -2338,15 +2457,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ai-system@workspace:*, ai-system@workspace:packages/ai-system":
-  version: 0.0.0-use.local
-  resolution: "ai-system@workspace:packages/ai-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-  languageName: unknown
-  linkType: soft
-
 "ajv-keywords@npm:^3.5.2":
   version: 3.5.2
   resolution: "ajv-keywords@npm:3.5.2"
@@ -3038,15 +3148,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camera-system@workspace:*, camera-system@workspace:packages/camera-system":
-  version: 0.0.0-use.local
-  resolution: "camera-system@workspace:packages/camera-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-  languageName: unknown
-  linkType: soft
-
 "caniuse-lite@npm:^1.0.30001406, caniuse-lite@npm:^1.0.30001517":
   version: 1.0.30001524
   resolution: "caniuse-lite@npm:1.0.30001524"
@@ -3180,30 +3281,30 @@ __metadata:
     "@loopholelabs/scale-http-adapters": ^0.3.9
     "@next/eslint-plugin-next": ^13.4.19
     "@pixi/react": ^7.1.0
+    "@space-game/ai-system": "workspace:*"
+    "@space-game/camera-system": "workspace:*"
+    "@space-game/controls-system": "workspace:*"
+    "@space-game/cull-system": "workspace:*"
+    "@space-game/move-system": "workspace:*"
+    "@space-game/physics-system": "workspace:*"
+    "@space-game/projectile-system": "workspace:*"
+    "@space-game/sort-system": "workspace:*"
+    "@space-game/spawn-system": "workspace:*"
+    "@space-game/store": "workspace:*"
     "@types/react": ^18.2.21
-    ai-system: "workspace:*"
     better-docs: ^2.7.2
-    camera-system: "workspace:*"
-    controls-system: "workspace:*"
-    cull-system: "workspace:*"
     eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-react: ^7.33.2
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-react-perf: ^3.3.1
     eslint-plugin-react-prefer-function-component: ^3.2.0
-    move-system: "workspace:*"
     next: ^13.4.19
-    physics-system: "workspace:*"
     pixi.js: ^7.2.4
-    projectile-system: "workspace:*"
     prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
     sass: ^1.66.1
-    sort-system: "workspace:*"
-    spawn-system: "workspace:*"
     statery: ^0.6.3
-    store: "workspace:*"
     uuid: ^9.0.0
   languageName: unknown
   linkType: soft
@@ -3389,15 +3490,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"controls-system@workspace:*, controls-system@workspace:packages/controls-system":
-  version: 0.0.0-use.local
-  resolution: "controls-system@workspace:packages/controls-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-  languageName: unknown
-  linkType: soft
-
 "convert-hrtime@npm:^3.0.0":
   version: 3.0.0
   resolution: "convert-hrtime@npm:3.0.0"
@@ -3487,15 +3579,6 @@ __metadata:
   checksum: e1a52e6c25c1314d6beef5168da704ab29c5186b877c07d822bd0806717d9a265e8493a2e35ca7e68d0f5d472d43fac1cdce70fd79fd0853dff81f3028d857b5
   languageName: node
   linkType: hard
-
-"cull-system@workspace:*, cull-system@workspace:packages/cull-system":
-  version: 0.0.0-use.local
-  resolution: "cull-system@workspace:packages/cull-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-  languageName: unknown
-  linkType: soft
 
 "damerau-levenshtein@npm:^1.0.8":
   version: 1.0.8
@@ -3816,17 +3899,6 @@ __metadata:
   checksum: 853f8ebd5b425d350bffa97dd6958143179a5938352ccae092c62d1267c4e392a039be1bae7d51b6e4ffad25f51f9617531fedf5237f15df302ccfb452cbf2d7
   languageName: node
   linkType: hard
-
-"entity-utilities@workspace:*, entity-utilities@workspace:packages/entity-utilities":
-  version: 0.0.0-use.local
-  resolution: "entity-utilities@workspace:packages/entity-utilities"
-  dependencies:
-    "@dimforge/rapier2d-compat": ^0.11.2
-    static-data: "workspace:*"
-    utilities: "workspace:*"
-    uuid: ^9.0.0
-  languageName: unknown
-  linkType: soft
 
 "env-paths@npm:^2.2.0":
   version: 2.2.1
@@ -6821,16 +6893,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"move-system@workspace:*, move-system@workspace:packages/move-system":
-  version: 0.0.0-use.local
-  resolution: "move-system@workspace:packages/move-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-    utilities: "workspace:*"
-  languageName: unknown
-  linkType: soft
-
 "mri@npm:1.2.0":
   version: 1.2.0
   resolution: "mri@npm:1.2.0"
@@ -7412,15 +7474,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"physics-system@workspace:*, physics-system@workspace:packages/physics-system":
-  version: 0.0.0-use.local
-  resolution: "physics-system@workspace:packages/physics-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-  languageName: unknown
-  linkType: soft
-
 "picocolors@npm:1.0.0, picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
@@ -7549,16 +7602,6 @@ __metadata:
   checksum: a00abd713d25389f6de7294f0e7879b8a5d09a9ec5fd81cc2f21b29d4f9a80ec53bc4222927d3a281d4aadd4cd373d9a28726fca3935921950dc75fd71d1fdbb
   languageName: node
   linkType: hard
-
-"projectile-system@workspace:*, projectile-system@workspace:packages/projectile-system":
-  version: 0.0.0-use.local
-  resolution: "projectile-system@workspace:packages/projectile-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-    entity-utilities: "workspace:*"
-  languageName: unknown
-  linkType: soft
 
 "promise-retry@npm:^2.0.1":
   version: 2.0.1
@@ -8438,15 +8481,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sort-system@workspace:*, sort-system@workspace:packages/sort-system":
-  version: 0.0.0-use.local
-  resolution: "sort-system@workspace:packages/sort-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-  languageName: unknown
-  linkType: soft
-
 "source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
@@ -8487,15 +8521,6 @@ __metadata:
   checksum: 5dc2043b93d2f194142c7f38f74a24670cd7a0063acdaf4bf01d2964b402257ae843c2a8fa822ad5b71013b5fcafa55af7421383da919752f22ff488bc553f4d
   languageName: node
   linkType: hard
-
-"spawn-system@workspace:*, spawn-system@workspace:packages/spawn-system":
-  version: 0.0.0-use.local
-  resolution: "spawn-system@workspace:packages/spawn-system"
-  dependencies:
-    "@loopholelabs/scale-signature": 0.2.11
-    "@loopholelabs/scale-signature-http": 0.3.8
-  languageName: unknown
-  linkType: soft
 
 "spdx-exceptions@npm:^2.1.0":
   version: 2.3.0
@@ -8567,30 +8592,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"static-data@workspace:*, static-data@workspace:packages/static-data":
-  version: 0.0.0-use.local
-  resolution: "static-data@workspace:packages/static-data"
-  dependencies:
-    store: "workspace:*"
-  languageName: unknown
-  linkType: soft
-
 "statuses@npm:2.0.1":
   version: 2.0.1
   resolution: "statuses@npm:2.0.1"
   checksum: 18c7623fdb8f646fb213ca4051be4df7efb3484d4ab662937ca6fbef7ced9b9e12842709872eb3020cc3504b93bde88935c9f6417489627a7786f24f8031cbcb
   languageName: node
   linkType: hard
-
-"store@workspace:*, store@workspace:packages/store":
-  version: 0.0.0-use.local
-  resolution: "store@workspace:packages/store"
-  dependencies:
-    entity-utilities: "workspace:*"
-    statery: ^0.7.1
-    static-data: "workspace:*"
-  languageName: unknown
-  linkType: soft
 
 "streamsearch@npm:^1.1.0":
   version: 1.1.0
@@ -9363,12 +9370,6 @@ __metadata:
   checksum: 705e51f0de5b446f4edec10739752ac25856541e0254ea1e7e45e5b9f9b0cb105bc4bd415736a6210edc68245a7f903bf085ffb08dd7deb8a0e847f60538a38a
   languageName: node
   linkType: hard
-
-"utilities@workspace:*, utilities@workspace:packages/utilities":
-  version: 0.0.0-use.local
-  resolution: "utilities@workspace:packages/utilities"
-  languageName: unknown
-  linkType: soft
 
 "utils-merge@npm:1.0.1":
   version: 1.0.1

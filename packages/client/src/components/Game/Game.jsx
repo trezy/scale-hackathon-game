@@ -4,7 +4,7 @@ import {
 	SCALE_MODES,
 } from '@pixi/core'
 import PropTypes from 'prop-types'
-import { store } from 'store'
+import { store } from '@space-game/store'
 import { useApp } from '@pixi/react'
 import { useEffect } from 'react'
 import { useStore } from 'statery'

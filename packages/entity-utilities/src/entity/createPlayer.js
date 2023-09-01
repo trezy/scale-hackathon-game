@@ -4,7 +4,7 @@ import {
 	SHIP_CLASS,
 	SPECIES,
 	WEAPON_TYPES,
-} from 'static-data'
+} from '@space-game/static-data'
 import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'
 import { positionComponent } from '../component/positionComponent.js'

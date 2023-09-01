@@ -1,6 +1,6 @@
 // Module imports
 import RAPIER from '@dimforge/rapier2d-compat'
-import { store } from 'store'
+import { store } from '@space-game/store'
 
 
 

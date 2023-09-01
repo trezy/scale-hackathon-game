@@ -2,7 +2,7 @@
 import {
 	SHIP_CLASS,
 	SPECIES,
-} from 'static-data'
+} from '@space-game/static-data'
 import { aiComponent } from '../component/aiComponent.js'
 import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'

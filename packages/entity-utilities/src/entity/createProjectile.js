@@ -1,5 +1,5 @@
 // Module imports
-import { getVectorFromRotation } from 'utilities'
+import { getVectorFromRotation } from '@space-game/utilities'
 
 // Local imports
 import { createEntity } from './createEntity.js'

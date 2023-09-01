@@ -1,11 +1,11 @@
 {
-	"name": "move-system",
+	"name": "@space-game/move-system",
 	"version": "0.0.0-development",
 	"main": "src/index.js",
 	"private": true,
 	"dependencies": {
 		"@loopholelabs/scale-signature": "0.2.11",
 		"@loopholelabs/scale-signature-http": "0.3.8",
-		"utilities": "workspace:*"
+		"@space-game/utilities": "workspace:*"
 	}
 }

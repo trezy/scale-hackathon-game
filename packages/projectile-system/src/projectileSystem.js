@@ -1,5 +1,5 @@
 // Module imports
-import { createProjectile } from 'entity-utilities'
+import { createProjectile } from '@space-game/entity-utilities'
 
 
 

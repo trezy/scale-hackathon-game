@@ -1,11 +1,13 @@
 {
-	"name": "entity-utilities",
+	"name": "@space-game/entity-utilities",
 	"version": "0.0.0-development",
 	"main": "src/index.js",
 	"private": true,
 	"dependencies": {
-		"static-data": "workspace:*",
-		"utilities": "workspace:*",
+		"@dimforge/rapier2d-compat": "^0.11.2",
+		"@space-game/static-data": "workspace:*",
+		"@space-game/store": "workspace:*",
+		"@space-game/utilities": "workspace:*",
 		"uuid": "^9.0.0"
 	}
 }

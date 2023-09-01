@@ -2,7 +2,7 @@
 import {
 	getPlayer,
 	store,
-} from 'store'
+} from '@space-game/store'
 import { useStore } from 'statery'
 
 

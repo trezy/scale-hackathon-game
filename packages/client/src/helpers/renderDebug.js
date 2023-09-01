@@ -1,8 +1,8 @@
 // Module imports
 import { Color } from '@pixi/color'
 import { Graphics } from '@pixi/graphics'
-import { PIXELS_PER_METER } from 'static-data'
-import { store } from 'store'
+import { PIXELS_PER_METER } from '@space-game/static-data'
+import { store } from '@space-game/store'
 
 // import { RenderLayers } from '@components/render'
 // import RAPIER from '@dimforge/rapier2d-compat'

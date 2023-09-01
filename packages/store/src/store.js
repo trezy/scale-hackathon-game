@@ -9,8 +9,8 @@ import { makeStore } from 'statery'
 import {
 	createEnemy,
 	createPlayer,
-} from 'entity-utilities'
-import { CONTROL_BINDINGS } from 'static-data'
+} from '@space-game/entity-utilities'
+import { CONTROL_BINDINGS } from '@space-game/static-data'
 import { generateInitialControlState } from './helpers/generateInitialControlState.js'
 
 

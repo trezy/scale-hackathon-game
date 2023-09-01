@@ -2,7 +2,7 @@
 import {
 	CONTROL_BINDINGS,
 	CONTROL_TYPES,
-} from 'static-data'
+} from '@space-game/static-data'
 
 
 

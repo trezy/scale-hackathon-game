@@ -1,7 +1,7 @@
 // Module imports
 import '@pixi/spritesheet'
 import { Assets } from '@pixi/assets'
-import { store } from 'store'
+import { store } from '@space-game/store'
 
 
 
