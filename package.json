@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "yarn@3.6.3",
+  "packageManager": "yarn@4.0.0-rc.50",
   "workspaces": [
     "packages/ai-system",
     "packages/camera-system",
@@ -25,12 +25,12 @@
   },
   "devDependencies": {
     "@types/node": "20.5.7",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
     "better-docs": "^2.7.2",
     "eslint": "^8.48.0",
     "eslint-plugin-editorconfig": "^4.0.3",
-    "eslint-plugin-jsdoc": "^46.5.0",
+    "eslint-plugin-jsdoc": "^46.5.1",
     "eslint-plugin-optimize-regex": "^1.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-security": "^1.7.1",

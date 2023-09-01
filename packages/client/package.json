@@ -16,7 +16,7 @@
     "@dimforge/rapier2d-compat": "^0.11.2",
     "@loopholelabs/scale": "^0.3.19",
     "@loopholelabs/scale-http-adapters": "^0.3.9",
-    "@pixi/react": "^7.1.0",
+    "@pixi/react": "^7.1.1",
     "@space-game/ai-system": "workspace:*",
     "@space-game/camera-system": "workspace:*",
     "@space-game/controls-system": "workspace:*",
@@ -33,7 +33,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.66.1",
-    "statery": "^0.6.3",
+    "statery": "^0.7.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
@@ -44,6 +44,6 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-perf": "^3.3.1",
-    "eslint-plugin-react-prefer-function-component": "^3.2.0"
+    "eslint-plugin-react-prefer-function-component": "^3.3.0"
   }
 }
