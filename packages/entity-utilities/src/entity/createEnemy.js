@@ -10,8 +10,8 @@ import {
 
 // Local imports
 import { aiComponent } from '../component/aiComponent.js'
-import { colliderComponent } from '../component/colliderComponent.js'
 import { createEntity } from './createEntity.js'
+import { physicsComponent } from '../component/physicsComponent.js'
 import { positionComponent } from '../component/positionComponent.js'
 import { rotationComponent } from '../component/rotationComponent.js'
 import { shipComponent } from '../component/shipComponent.js'
@@ -34,7 +34,7 @@ import { velocityComponent } from '../component/velocityComponent.js'
 export function createEnemy(x, y, width, height) {
 	return createEntity(
 		aiComponent(),
-		colliderComponent({
+		physicsComponent({
 			height,
 			position: {
 				x,

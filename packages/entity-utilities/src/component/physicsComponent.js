@@ -7,7 +7,7 @@ import { createStaticBody } from '../physics/createRigidBody.js'
 
 
 /**
- * Manages the physics collider for an entity.
+ * Manages the physics for an entity.
  *
  * @param {object} config All configuration.
  * @param {number} config.height The height of the entity's collider.
@@ -15,9 +15,14 @@ import { createStaticBody } from '../physics/createRigidBody.js'
  * @param {number} config.position.x The position of the entity on the horizontal axis.
  * @param {number} config.position.y The position of the entity on the vertical axis.
  * @param {number} config.width The width of the entity's collider.
- * @returns {{ physics: object }} The new collider component.
+ * @returns {{
+ * 	physics: {
+ * 		body: import('@dimforge/rapier2d-compat').RigidBody,
+ * 		collider: import('@dimforge/rapier2d-compat').Collider,
+ * 	},
+ * }} The new physics component.
  */
-export function colliderComponent(config) {
+export function physicsComponent(config) {
 	const {
 		height,
 		position,
