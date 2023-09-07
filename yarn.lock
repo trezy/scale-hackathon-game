@@ -1685,6 +1685,7 @@ __metadata:
   dependencies:
     "@loopholelabs/scale-signature": "npm:0.2.11"
     "@loopholelabs/scale-signature-http": "npm:0.3.8"
+    "@space-game/static-data": "workspace:*"
     "@space-game/utilities": "workspace:*"
   languageName: unknown
   linkType: soft
@@ -3292,6 +3293,7 @@ __metadata:
     "@space-game/projectile-system": "workspace:*"
     "@space-game/sort-system": "workspace:*"
     "@space-game/spawn-system": "workspace:*"
+    "@space-game/static-data": "workspace:*"
     "@space-game/store": "workspace:*"
     "@types/react": "npm:^18.2.21"
     better-docs: "npm:^2.7.2"

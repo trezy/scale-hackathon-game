@@ -26,6 +26,7 @@
     "@space-game/projectile-system": "workspace:*",
     "@space-game/sort-system": "workspace:*",
     "@space-game/spawn-system": "workspace:*",
+    "@space-game/static-data": "workspace:*",
     "@space-game/store": "workspace:*",
     "next": "^13.4.19",
     "pixi.js": "^7.2.4",

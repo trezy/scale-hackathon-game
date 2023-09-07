@@ -1,5 +1,9 @@
 // Module imports
-import RAPIER from '@dimforge/rapier2d-compat'
+import {
+	EventQueue as RapierEventQueue,
+	init as RapierInit,
+	World as RapierWorld,
+} from '@dimforge/rapier2d-compat'
 import { store } from '@space-game/store'
 
 
@@ -23,13 +27,13 @@ export async function initialize() {
 	await loadGameAssets()
 
 	// Physics
-	await RAPIER.init()
+	await RapierInit()
 	store.set({
-		physicsWorld: new RAPIER.World({
+		physicsWorld: new RapierWorld({
 			x: 0,
 			y: 0,
 		}),
-		physicsEvents: new RAPIER.EventQueue(true),
+		physicsEvents: new RapierEventQueue(true),
 	})
 
 	store.set(() => ({

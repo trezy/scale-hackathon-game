@@ -17,6 +17,7 @@ import { useStore } from 'statery'
 import { GameBackground } from '../GameBackground/GameBackground.jsx'
 import { GameEntities } from '../GameEntities/GameEntities.jsx'
 import { initialize } from '../../game/initialize.js'
+import { PhysicsDebugger } from '../PhysicsDebugger/PhysicsDebugger.jsx'
 import { useGameLoop } from '../../hooks/useGameLoop.js'
 
 
@@ -73,6 +74,7 @@ export function Game(props) {
 		<>
 			<GameBackground />
 			<GameEntities />
+			<PhysicsDebugger />
 		</>
 	)
 }
