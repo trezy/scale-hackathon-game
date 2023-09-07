@@ -33,14 +33,18 @@ export function Debugger() {
 				<dt>{'Entity Count:'}</dt>
 				<dd>{entities.length}</dd>
 
-				<dt>{'Player X:'}</dt>
-				<dd>{player.position.x.toFixed(2)}</dd>
+				{Boolean(player) && (
+					<>
+						<dt>{'Player X:'}</dt>
+						<dd>{player.position.x.toFixed(2)}</dd>
 
-				<dt>{'Player Y:'}</dt>
-				<dd>{player.position.y.toFixed(2)}</dd>
+						<dt>{'Player Y:'}</dt>
+						<dd>{player.position.y.toFixed(2)}</dd>
 
-				<dt>{'Player is firing:'}</dt>
-				<dd>{String(player.weapons.isFiring)}</dd>
+						<dt>{'Player is firing:'}</dt>
+						<dd>{String(player.weapons.isFiring)}</dd>
+					</>
+				)}
 			</dl>
 		</div>
 	)
