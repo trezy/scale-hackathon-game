@@ -15,6 +15,7 @@ export function projectileSystem() {
 		const {
 			entities,
 			lastTick,
+			physicsWorld,
 		} = state
 
 		const projectiles = entities
@@ -36,7 +37,11 @@ export function projectileSystem() {
 						if ((lastTick - fireDelay) >= weapon.lastFired) {
 							switch (weapon.type) {
 								case WEAPON_TYPES.GUN:
-									accumulator.push(createProjectile(entity, weapon))
+									accumulator.push(createProjectile({
+										parentEntity: entity,
+										weapon,
+										world: physicsWorld,
+									}))
 									break
 
 								default:

@@ -12,6 +12,7 @@ import { WEAPONS } from './WEAPONS.js'
  * @typedef {object} WeaponData
  * @property {number} fireRate The rate of fire for the weapon.
  * @property {number} initialDelay The delay (in milliseconds) before the weapon will start firing.
+ * @property {number} [lastFired] The timestamp when this weapon was last fired.
  * @property {object} projectile Data for the weapon's projectiles.
  * @property {number} projectile.damage The base damage of projectiles.
  * @property {number} projectile.direction The angle offset of projectiles.
