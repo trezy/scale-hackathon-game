@@ -1,8 +1,12 @@
+// Module imports
+import { CONTROL_TYPES } from '@space-game/static-data'
+
+
+
+
+
 // Local imports
-import {
-	CONTROL_BINDINGS,
-	CONTROL_TYPES,
-} from '@space-game/static-data'
+import { DEFAULT_CONTROL_BINDINGS } from '../data/DEFAULT_CONTROL_BINDINGS.js'
 
 
 
@@ -28,7 +32,7 @@ export function generateInitialControlState() {
 	 * }}
 	 */
 	return Object
-		.entries(CONTROL_BINDINGS)
+		.entries(DEFAULT_CONTROL_BINDINGS)
 		.reduce((accumulator, [bindingKey, binding]) => {
 			accumulator[bindingKey] = { isActive: false }
 

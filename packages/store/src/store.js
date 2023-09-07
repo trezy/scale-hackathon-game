@@ -1,5 +1,5 @@
 // Module imports
-import { CONTROL_BINDINGS } from '@space-game/static-data'
+import { DEFAULT_CONTROL_BINDINGS } from './data/DEFAULT_CONTROL_BINDINGS.js'
 import { makeStore } from 'statery'
 
 
@@ -25,7 +25,7 @@ export const store = makeStore({
 		},
 	},
 
-	controlBindings: CONTROL_BINDINGS,
+	controlBindings: DEFAULT_CONTROL_BINDINGS,
 
 	controlState: generateInitialControlState(),
 

@@ -1,6 +1,7 @@
 // Module imports
 import { createProjectile } from '@space-game/entity-utilities'
 import { store } from '@space-game/store'
+import { WEAPON_TYPES } from '@space-game/static-data'
 
 
 
@@ -26,13 +27,15 @@ export function projectileSystem() {
 
 				if (isFiring) {
 					activeWeapons.forEach(weapon => {
+						const fireDelay = weapon.fireRate * 1000
+
 						if (!weapon.lastFired && ('initialDelay' in weapon) && (weapon.initialDelay > 0)) {
-							weapon.lastFired = lastTick + weapon.initialDelay - weapon.firingDelay
+							weapon.lastFired = lastTick + weapon.initialDelay - fireDelay
 						}
 
-						if ((lastTick - weapon.firingDelay) >= weapon.lastFired) {
+						if ((lastTick - fireDelay) >= weapon.lastFired) {
 							switch (weapon.type) {
-								case 'gun':
+								case WEAPON_TYPES.GUN:
 									accumulator.push(createProjectile(entity, weapon))
 									break
 

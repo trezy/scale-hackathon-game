@@ -1,9 +1,10 @@
 // Local imports
 import {
-	PROJECTILE_TYPES,
 	SHIP_CLASS,
 	SPECIES,
+	WEAPON_DATA,
 	WEAPON_TYPES,
+	WEAPONS,
 } from '@space-game/static-data'
 import { createEntity } from './createEntity.js'
 import { physicsComponent } from '../component/physicsComponent.js'
@@ -47,28 +48,26 @@ export function createPlayer(config) {
 		velocityComponent(0, 0),
 		weaponsComponent(
 			{
-				firingDelay: 850,
-				projectileDamage: 1,
-				projectileDirection: 0,
-				projectileOffset: {
-					x: -10,
-					y: 20,
+				...WEAPON_DATA[WEAPONS.CANNON],
+				projectile: {
+					...WEAPON_DATA[WEAPONS.CANNON].projectile,
+					offset: {
+						x: -10,
+						y: 20,
+					},
 				},
-				projectileSpeed: 10,
-				projectileType: PROJECTILE_TYPES.BULLET,
 				type: WEAPON_TYPES.GUN,
 			},
 			{
-				firingDelay: 850,
+				...WEAPON_DATA[WEAPONS.CANNON],
 				initialDelay: 300,
-				projectileDamage: 1,
-				projectileDirection: 0,
-				projectileOffset: {
-					x: 10,
-					y: 20,
+				projectile: {
+					...WEAPON_DATA[WEAPONS.CANNON].projectile,
+					offset: {
+						x: 10,
+						y: 20,
+					},
 				},
-				projectileSpeed: 10,
-				projectileType: PROJECTILE_TYPES.BULLET,
 				type: WEAPON_TYPES.GUN,
 			},
 		),

@@ -1,5 +1,4 @@
 export * from './types/Entity.js'
-export * from './types/Weapon.js'
 export * from './entity/createEnemy.js'
 export * from './entity/createEntity.js'
 export * from './entity/createPlayer.js'

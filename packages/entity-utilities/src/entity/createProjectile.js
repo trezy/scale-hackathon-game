@@ -32,14 +32,14 @@ export function createProjectile(parentEntity, weapon) {
 
 	return createEntity(
 		positionComponent(
-			position.x + weapon.projectileOffset.x,
-			position.y + weapon.projectileOffset.y,
+			position.x + weapon.projectile.offset.x,
+			position.y + weapon.projectile.offset.y,
 		),
-		projectileComponent(species, weapon.projectileType),
+		projectileComponent(species, weapon.projectile.type),
 		rotationComponent(rotation),
 		velocityComponent(
-			velocity.x * weapon.projectileSpeed,
-			velocity.y * weapon.projectileSpeed,
+			velocity.x * weapon.projectile.speed,
+			velocity.y * weapon.projectile.speed,
 		),
 	)
 }
