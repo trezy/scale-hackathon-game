@@ -5,7 +5,6 @@ import {
 	SPECIES,
 	WEAPON_TYPES,
 } from '@space-game/static-data'
-import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'
 import { positionComponent } from '../component/positionComponent.js'
 import { rotationComponent } from '../component/rotationComponent.js'
@@ -26,7 +25,6 @@ import { weaponsComponent } from '../component/weaponsComponent.js'
 export function createPlayer() {
 	return createEntity(
 		{ isPlayer: true },
-		colorComponent(0x0000ff),
 		positionComponent(0, 0),
 		rotationComponent(0),
 		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.FIGHTER),

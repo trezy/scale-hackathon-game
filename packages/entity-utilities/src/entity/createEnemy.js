@@ -11,7 +11,6 @@ import {
 // Local imports
 import { aiComponent } from '../component/aiComponent.js'
 import { colliderComponent } from '../component/colliderComponent.js'
-import { colorComponent } from '../component/colorComponent.js'
 import { createEntity } from './createEntity.js'
 import { positionComponent } from '../component/positionComponent.js'
 import { rotationComponent } from '../component/rotationComponent.js'
@@ -43,7 +42,6 @@ export function createEnemy(x, y, width, height) {
 			},
 			width,
 		}),
-		colorComponent(0xff0000),
 		positionComponent(x, y),
 		rotationComponent(0),
 		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.BATTLECRUISER),
