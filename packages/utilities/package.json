@@ -3,5 +3,8 @@
 	"version": "0.0.0-development",
 	"main": "src/index.js",
 	"private": true,
-	"type": "module"
+	"type": "module",
+	"scripts": {
+		"generate-types": "tsc --project tsconfig.json"
+	}
 }

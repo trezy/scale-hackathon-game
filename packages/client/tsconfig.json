@@ -13,7 +13,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "module": "esnext",
+    "module": "nodenext",
     "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,

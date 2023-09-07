@@ -4,6 +4,9 @@
 	"main": "src/index.js",
 	"private": true,
 	"type": "module",
+	"scripts": {
+		"generate-types": "tsc --project tsconfig.json"
+	},
 	"dependencies": {
 		"@space-game/store": "workspace:*"
 	}

@@ -1,6 +1,7 @@
 .DS_Store
 yarn-error.log
 node_modules/
+types/
 
 .yarn/*
 !.yarn/cache

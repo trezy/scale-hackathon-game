@@ -9,3 +9,20 @@ This repo is being built as an example of how [Scale](https://scale.sh) could be
 * [`move-system`](/packages/move-system/README.md)
 * [`physics-system`](/packages/physics-system/README.md)
 * [`spawn-system`](/packages/spawn-system/README.md)
+
+## Development
+
+To start the app locally, you must first install the required packages with [Yarn][yarn] (npm is not supported):
+
+```sh
+yarn install
+```
+
+Once all dependencies have been installed, you can start the application with `yarn dev`. This will start a PM2 daemon running the client (a [Next.js][next.js] app), as well as watchers for each of the other packages which will automatically rebuild the types when changes are made.
+
+
+
+
+
+[Next.js]: [https://nextjs.org/]
+[yarn]: https://yarnpkg.com/

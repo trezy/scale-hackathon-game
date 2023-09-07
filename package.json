@@ -6,8 +6,24 @@
   ],
   "scripts": {
     "build:client": "yarn build:client",
+    "generate-types:ai-system": "yarn workspace @space-game/ai-system generate-types",
+    "generate-types:camera-system": "yarn workspace @space-game/camera-system generate-types",
+    "generate-types:controls-system": "yarn workspace @space-game/controls-system generate-types",
+    "generate-types:cull-system": "yarn workspace @space-game/cull-system generate-types",
+    "generate-types:entity-utilities": "yarn workspace @space-game/entity-utilities generate-types",
+    "generate-types:move-system": "yarn workspace @space-game/move-system generate-types",
+    "generate-types:physics-system": "yarn workspace @space-game/physics-system generate-types",
+    "generate-types:projectile-system": "yarn workspace @space-game/projectile-system generate-types",
+    "generate-types:sort-system": "yarn workspace @space-game/sort-system generate-types",
+    "generate-types:spawn-system": "yarn workspace @space-game/spawn-system generate-types",
+    "generate-types:static-data": "yarn workspace @space-game/static-data generate-types",
+    "generate-types:store": "yarn workspace @space-game/store generate-types",
+    "generate-types:utilities": "yarn workspace @space-game/utilities generate-types",
+    "generate-types": "yarn generate-types:ai-system && yarn generate-types:camera-system && yarn generate-types:controls-system && yarn generate-types:cull-system && yarn generate-types:entity-utilities && yarn generate-types:move-system && yarn generate-types:physics-system && yarn generate-types:projectile-system && yarn generate-types:sort-system && yarn generate-types:spawn-system && yarn generate-types:static-data && yarn generate-types:store && yarn generate-types:utilities",
     "dev:client": "yarn workspace client dev",
+    "dev": "pm2 start && pm2 monit",
     "lint:client": "yarn workspace client lint",
+    "monitor": "pm2 monit",
     "start:client": "yarn workspace client start"
   },
   "devDependencies": {
@@ -23,6 +39,8 @@
     "eslint-plugin-security": "^1.7.1",
     "eslint-plugin-sort-class-members": "^1.18.0",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "nodemon": "^3.0.1",
+    "pm2": "^5.3.0",
     "typescript": "^5.2.2"
   }
 }
