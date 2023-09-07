@@ -1723,6 +1723,8 @@ __metadata:
   dependencies:
     "@loopholelabs/scale-signature": "npm:0.2.11"
     "@loopholelabs/scale-signature-http": "npm:0.3.8"
+    "@space-game/entity-utilities": "workspace:*"
+    "@space-game/store": "workspace:*"
   languageName: unknown
   linkType: soft
 
