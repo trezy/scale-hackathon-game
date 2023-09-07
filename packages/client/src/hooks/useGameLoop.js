@@ -27,6 +27,12 @@ export function useGameLoop() {
 			lastTick: ticker.lastTime,
 		}))
 
+		const { isInitialized } = store.state
+
+		if (!isInitialized) {
+			return
+		}
+
 		controlsSystem(store)
 		moveSystem(store)
 		aiSystem(store)
