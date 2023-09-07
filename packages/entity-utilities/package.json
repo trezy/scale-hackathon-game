@@ -3,6 +3,7 @@
 	"version": "0.0.0-development",
 	"main": "src/index.js",
 	"private": true,
+	"type": "module",
 	"dependencies": {
 		"@dimforge/rapier2d-compat": "^0.11.2",
 		"@space-game/static-data": "workspace:*",

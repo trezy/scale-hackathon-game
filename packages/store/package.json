@@ -3,6 +3,7 @@
 	"version": "0.0.0-development",
 	"main": "src/index.js",
 	"private": true,
+	"type": "module",
 	"dependencies": {
 		"@space-game/entity-utilities": "workspace:*",
 		"@space-game/static-data": "workspace:*",
