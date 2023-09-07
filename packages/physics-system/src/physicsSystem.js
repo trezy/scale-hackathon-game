@@ -1,9 +1,14 @@
+// Module imports
+import { store } from '@space-game/store'
+
+
+
+
+
 /**
  * Detects collisions and updates entities accordingly.
- *
- * @param {object} store Statery store with the game's state.
  */
-export function physicsSystem(store) {
+export function physicsSystem() {
 	store.set(state => {
 		const { entities } = state
 

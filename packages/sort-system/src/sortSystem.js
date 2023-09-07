@@ -1,3 +1,10 @@
+// Module imports
+import { store } from '@space-game/store'
+
+
+
+
+
 // Local imports
 import { quicksort } from './quicksort.js'
 
@@ -7,10 +14,8 @@ import { quicksort } from './quicksort.js'
 
 /**
  * Sorts entities by their y position.
- *
- * @param {object} store Statery store with the game's state.
  */
-export function sortSystem(store) {
+export function sortSystem() {
 	store.set(state => {
 		const { entities } = state
 

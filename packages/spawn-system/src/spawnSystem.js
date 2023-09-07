@@ -2,6 +2,7 @@
 import {
 	addEntities,
 	getPlayer,
+	store,
 } from '@space-game/store'
 import {
 	createEnemy,
@@ -14,21 +15,18 @@ import {
 
 /**
  * Spawns new entities when appropriate.
- *
- * @param {object} store Statery store with the game's state.
  */
-export function spawnSystem(store) {
-	const { entities } = store.state
+export function spawnSystem() {
 	const player = getPlayer(store.state)
 
 	if (!player) {
 		addEntities(createPlayer())
 	}
 
-	if (entities.length < 3) {
+	if (store.state.entities.length < 3) {
 		addEntities(
-			createEnemy(100, 100, 20, 20),
-			createEnemy(150, 80, 20, 20),
+			createEnemy(100, 100, 256, 256),
+			createEnemy(150, 80, 256, 256),
 		)
 	}
 }

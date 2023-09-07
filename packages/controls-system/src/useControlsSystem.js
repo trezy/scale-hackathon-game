@@ -3,6 +3,7 @@ import {
 	useCallback,
 	useEffect,
 } from 'react'
+import { store } from '@space-game/store'
 
 
 
@@ -19,10 +20,9 @@ import { handleKeyUp } from './handleKeyUp.js'
 /**
  * Handles setup and teardown of event listeners.
  *
- * @param {object} store Statery store with the game's state.
  * @param {*[]} [dependencies] Dependencies which, when changed, require the hook to be re-established.
  */
-export function useControlsSystem(store, dependencies = []) {
+export function useControlsSystem(dependencies = []) {
 	const keyDownHandler = useCallback(event => {
 		return handleKeyDown(store, event)
 	}, [store])

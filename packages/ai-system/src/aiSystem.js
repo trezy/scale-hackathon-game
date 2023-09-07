@@ -1,3 +1,10 @@
+// Module imports
+import { store } from '@space-game/store'
+
+
+
+
+
 // Local imports
 import { checkActions } from './checkActions.js'
 import { executeActions } from './executeActions.js'
@@ -8,10 +15,8 @@ import { executeActions } from './executeActions.js'
 
 /**
  * Handles AI decision making.
- *
- * @param {object} store Statery store with the game's state.
  */
-export function aiSystem(store) {
+export function aiSystem() {
 	store.set(state => {
 		const { entities } = state
 

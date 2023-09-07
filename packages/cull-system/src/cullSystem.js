@@ -1,9 +1,14 @@
+// Module imports
+import { store } from '@space-game/store'
+
+
+
+
+
 /**
  * Culls unnecessary entities.
- *
- * @param {object} store Statery store with the game's state.
  */
-export function cullSystem(store) {
+export function cullSystem() {
 	store.set(state => {
 		const {
 			entities,

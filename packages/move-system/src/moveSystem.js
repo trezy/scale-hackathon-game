@@ -1,6 +1,7 @@
 // Module imports
 // import { getRotationFromVector } from '@space-game/utilities'
 import { PIXELS_PER_METER } from '@space-game/static-data'
+import { store } from '@space-game/store'
 
 
 
@@ -8,10 +9,8 @@ import { PIXELS_PER_METER } from '@space-game/static-data'
 
 /**
  * Moves entities based on their velocity.
- *
- * @param {object} store Statery store with the game's state.
  */
-export function moveSystem(store) {
+export function moveSystem() {
 	store.set(previousState => {
 		const { entities } = previousState
 

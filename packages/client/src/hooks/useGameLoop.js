@@ -34,15 +34,15 @@ export function useGameLoop() {
 			return
 		}
 
-		controlsSystem(store)
-		spawnSystem(store)
-		aiSystem(store)
-		physicsSystem(store)
-		projectileSystem(store)
-		moveSystem(store)
-		cullSystem(store)
-		sortSystem(store)
+		controlsSystem()
+		spawnSystem()
+		aiSystem()
+		physicsSystem()
+		projectileSystem()
+		moveSystem()
+		cullSystem()
+		sortSystem()
 	})
 
-	useControlsSystem(store)
+	useControlsSystem()
 }

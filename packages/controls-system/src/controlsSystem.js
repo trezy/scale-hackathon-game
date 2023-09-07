@@ -1,3 +1,10 @@
+// Module imports
+import { store } from '@space-game/store'
+
+
+
+
+
 // Local imports
 import { state } from './state.js'
 
@@ -7,10 +14,8 @@ import { state } from './state.js'
 
 /**
  * Captures and parses the current control state.
- *
- * @param {object} store Statery store with the game's state.
  */
-export function controlsSystem(store) {
+export function controlsSystem() {
 	const {
 		controlBindings,
 		controlState,

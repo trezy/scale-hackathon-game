@@ -1,5 +1,6 @@
 // Module imports
 import { createProjectile } from '@space-game/entity-utilities'
+import { store } from '@space-game/store'
 
 
 
@@ -7,10 +8,8 @@ import { createProjectile } from '@space-game/entity-utilities'
 
 /**
  * Spawns new weapon projectiles.
- *
- * @param {object} store Statery store with the game's state.
  */
-export function projectileSystem(store) {
+export function projectileSystem() {
 	store.set(state => {
 		const {
 			entities,
