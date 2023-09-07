@@ -26,7 +26,6 @@ export function Entity(props) {
 		<Container
 			x={entity.position.x}
 			y={entity.position.y}>
-			{/* <Graphics draw={draw} /> */}
 			{Boolean(entity.projectile) && (
 				<Projectile entity={entity} />
 			)}
