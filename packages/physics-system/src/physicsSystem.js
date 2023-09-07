@@ -29,7 +29,7 @@ export function physicsSystem() {
 				return entity
 			}),
 		}
-	}, true)
+	}, { forceNotify: true })
 
 	const {
 		physicsEvents,

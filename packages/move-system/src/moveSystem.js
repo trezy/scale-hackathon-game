@@ -30,5 +30,5 @@ export function moveSystem() {
 				return entity
 			}),
 		}
-	}, true)
+	}, { forceNotify: true })
 }
