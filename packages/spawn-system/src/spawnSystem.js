@@ -25,8 +25,24 @@ export function spawnSystem() {
 
 	if (store.state.entities.length < 3) {
 		addEntities(
-			createEnemy(100, 100, 256, 256),
-			createEnemy(150, 80, 256, 256),
+			createEnemy({
+				position: {
+					x: 100,
+					y: 100,
+				},
+				height: 256,
+				width: 256,
+				world: store.state.physicsWorld,
+			}),
+			createEnemy({
+				position: {
+					x: 150,
+					y: 80,
+				},
+				height: 256,
+				width: 256,
+				world: store.state.physicsWorld,
+			}),
 		)
 	}
 }

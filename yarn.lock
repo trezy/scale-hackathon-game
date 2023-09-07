@@ -1774,8 +1774,8 @@ __metadata:
   dependencies:
     "@dimforge/rapier2d-compat": "npm:^0.11.2"
     "@space-game/static-data": "workspace:*"
-    "@space-game/store": "workspace:*"
     "@space-game/utilities": "workspace:*"
+    statery: "npm:^0.7.1"
     uuid: "npm:^9.0.0"
   languageName: unknown
   linkType: soft

@@ -11,8 +11,10 @@
 	"dependencies": {
 		"@dimforge/rapier2d-compat": "^0.11.2",
 		"@space-game/static-data": "workspace:*",
-		"@space-game/store": "workspace:*",
 		"@space-game/utilities": "workspace:*",
 		"uuid": "^9.0.0"
+	},
+	"devDependencies": {
+		"statery": "^0.7.1"
 	}
 }

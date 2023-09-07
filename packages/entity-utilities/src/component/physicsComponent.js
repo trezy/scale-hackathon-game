@@ -1,6 +1,6 @@
 // Local imports
 import { createCollider } from '../physics/createCollider.js'
-import { createStaticBody } from '../physics/createRigidBody.js'
+import { createDynamicBody } from '../physics/createRigidBody.js'
 
 
 
@@ -15,6 +15,7 @@ import { createStaticBody } from '../physics/createRigidBody.js'
  * @param {number} config.position.x The position of the entity on the horizontal axis.
  * @param {number} config.position.y The position of the entity on the vertical axis.
  * @param {number} config.width The width of the entity's collider.
+ * @param {import('@dimforge/rapier2d-compat').World} config.world The physics world.
  * @returns {{
  * 	physics: {
  * 		body: import('@dimforge/rapier2d-compat').RigidBody,
@@ -27,17 +28,25 @@ export function physicsComponent(config) {
 		height,
 		position,
 		width,
+		world,
 	} = config
 
-	const body = createStaticBody(
-		position.x + (width / 2),
-		position.y + (height / 2),
-	)
+	const body = createDynamicBody({
+		position: {
+			x: position.x + (width / 2),
+			y: position.y + (height / 2),
+		},
+		world,
+	})
 
-	const collider = createCollider('rectangle', {
+	const collider = createCollider({
 		height,
+		parentRigidBody: body,
+		position,
+		shape: 'rectangle',
 		width,
-	}, body)
+		world,
+	})
 
 	return {
 		physics: {

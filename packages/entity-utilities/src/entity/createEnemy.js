@@ -25,24 +25,32 @@ import { velocityComponent } from '../component/velocityComponent.js'
 /**
  * Creates an enemy entity.
  *
- * @param {number} x The entity's position on the horizontal axis.
- * @param {number} y The entity's position on the vertical axis.
- * @param {number} width The width of the entity.
- * @param {number} height The height of the entity.
+ * @param {object} config All configuration.
+ * @param {number} config.height The height of the entity.
+ * @param {object} config.position The enemy's position.
+ * @param {number} config.position.x The enemy's position on the horizontal axis.
+ * @param {number} config.position.y The enemy's position on the vertical axis.
+ * @param {number} config.width The width of the entity.
+ * @param {import('@dimforge/rapier2d-compat').World} config.world The physics world.
  * @returns {import('../types/Entity.js').Entity} The new entity.
  */
-export function createEnemy(x, y, width, height) {
+export function createEnemy(config) {
+	const {
+		height,
+		position,
+		width,
+		world,
+	} = config
+
 	return createEntity(
 		aiComponent(),
 		physicsComponent({
 			height,
-			position: {
-				x,
-				y,
-			},
+			position,
 			width,
+			world,
 		}),
-		positionComponent(x, y),
+		positionComponent(position.x, position.y),
 		rotationComponent(0),
 		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.BATTLECRUISER),
 		sizeComponent(width, height),
