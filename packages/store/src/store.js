@@ -36,8 +36,8 @@ export const store = makeStore({
 	/** @type {object[]} */
 	entities: [],
 
-	/** @type {null | number[]} */
-	entityRenderOrder: null,
+	/** @type {number[]} */
+	entityRenderOrder: [],
 
 	isLoadingAssets: false,
 
