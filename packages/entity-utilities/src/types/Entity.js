@@ -14,5 +14,5 @@
  * @property {number} velocity.y The entity's current velocity on the vertical axis.
  * @property {object} [weapons] The entity's weapons.
  * @property {boolean} weapons.isFiring Whether the entity is currently firing its weapons.
- * @property {import('./Weapon.js').Weapon[]} weapons.activeWeapons An array of weapons belonging to the entity.
+ * @property {import('@space-game/static-data').WeaponData[]} weapons.activeWeapons An array of weapons belonging to the entity.
  */
