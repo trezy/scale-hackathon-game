@@ -1,5 +1,6 @@
 /**
  * @typedef {object} Entity
+ * @property {string} id A unique identifier for the entity.
  * @property {object} [physics] Physics-related values.
  * @property {import('@dimforge/rapier2d-compat').RigidBody} physics.body The entity's Rapier RigidBody.
  * @property {import('@dimforge/rapier2d-compat').Collider} physics.collider The entity's Rapier Collider.
