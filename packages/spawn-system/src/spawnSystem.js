@@ -17,13 +17,26 @@ import {
  * Spawns new entities when appropriate.
  */
 export function spawnSystem() {
+	const {
+		entities,
+		physicsWorld,
+	} = store.state
+
 	const player = getPlayer(store.state)
 
 	if (!player) {
-		addEntities(createPlayer())
+		addEntities(createPlayer({
+			position: {
+				x: 0,
+				y: 0,
+			},
+			height: 128,
+			width: 128,
+			world: physicsWorld,
+		}))
 	}
 
-	if (store.state.entities.length < 3) {
+	if (entities.length < 3) {
 		addEntities(
 			createEnemy({
 				position: {
@@ -32,7 +45,7 @@ export function spawnSystem() {
 				},
 				height: 256,
 				width: 256,
-				world: store.state.physicsWorld,
+				world: physicsWorld,
 			}),
 			createEnemy({
 				position: {
@@ -41,7 +54,7 @@ export function spawnSystem() {
 				},
 				height: 256,
 				width: 256,
-				world: store.state.physicsWorld,
+				world: physicsWorld,
 			}),
 		)
 	}

@@ -6,6 +6,7 @@ import {
 	WEAPON_TYPES,
 } from '@space-game/static-data'
 import { createEntity } from './createEntity.js'
+import { physicsComponent } from '../component/physicsComponent.js'
 import { positionComponent } from '../component/positionComponent.js'
 import { rotationComponent } from '../component/rotationComponent.js'
 import { shipComponent } from '../component/shipComponent.js'
@@ -20,15 +21,29 @@ import { weaponsComponent } from '../component/weaponsComponent.js'
 /**
  * Creates the player-controlled entity.
  *
+ * @param {object} config All configuration.
+ * @param {number} config.height The height of the entity.
+ * @param {object} config.position The enemy's position.
+ * @param {number} config.position.x The enemy's position on the horizontal axis.
+ * @param {number} config.position.y The enemy's position on the vertical axis.
+ * @param {number} config.width The width of the entity.
+ * @param {import('@dimforge/rapier2d-compat').World} config.world The physics world.
  * @returns {import('../types/Entity.js').Entity} The new entity.
  */
-export function createPlayer() {
+export function createPlayer(config) {
+	const {
+		height,
+		position,
+		width,
+		world,
+	} = config
+
 	return createEntity(
 		{ isPlayer: true },
-		positionComponent(0, 0),
+		positionComponent(position.x, position.y),
 		rotationComponent(0),
 		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.FIGHTER),
-		sizeComponent(20, 20),
+		sizeComponent(width, height),
 		velocityComponent(0, 0),
 		weaponsComponent(
 			{
@@ -57,5 +72,11 @@ export function createPlayer() {
 				type: WEAPON_TYPES.GUN,
 			},
 		),
+		physicsComponent({
+			height,
+			position,
+			width,
+			world,
+		}),
 	)
 }
