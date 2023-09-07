@@ -42,7 +42,7 @@ export function Ship(props) {
 	])
 
 	return (
-		<Container rotation={entity.rotation.value}>
+		<Container>
 			{isMoving && (
 				<AnimatedSprite
 					anchor={SPRITE_ANCHOR}

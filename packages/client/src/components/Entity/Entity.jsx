@@ -24,6 +24,7 @@ export function Entity(props) {
 
 	return (
 		<Container
+			rotation={entity.physics.body.rotation()}
 			x={entity.position.x}
 			y={entity.position.y}>
 			{'projectile' in entity && (
