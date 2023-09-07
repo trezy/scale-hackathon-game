@@ -14,16 +14,17 @@ export function physicsSystem() {
 
 		return {
 			entities: entities.map(entity => {
-				if (('physics' in entity) && ('rotation' in entity) && ('velocity' in entity)) {
+				if (('physics' in entity) && ('rotation' in entity) && ('speed' in entity) && ('velocity' in entity)) {
 					const {
 						physics,
 						rotation,
+						speed,
 						velocity,
 					} = entity
 
 					physics.body.setLinvel({
-						x: velocity.x,
-						y: velocity.y,
+						x: velocity.x * speed.value,
+						y: velocity.y * speed.value,
 					}, true)
 
 					physics.body.setRotation(rotation.value, true)

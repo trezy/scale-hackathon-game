@@ -9,6 +9,8 @@
  * @property {number} position.y The entity's current position on the vertical axis.
  * @property {object} [rotation] The entity's current rotation.
  * @property {number} rotation.value The entity's current rotation (in radians).
+ * @property {object} [speed] The entity's current speed multiplier.
+ * @property {number} speed.value The entity's current speed multiplier.
  * @property {object} [velocity] The entity's current velocity vector.
  * @property {number} velocity.x The entity's current velocity on the horizontal axis.
  * @property {number} velocity.y The entity's current velocity on the vertical axis.
