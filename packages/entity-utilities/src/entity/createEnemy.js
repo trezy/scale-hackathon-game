@@ -11,11 +11,8 @@ import {
 // Local imports
 import { aiComponent } from '../component/aiComponent.js'
 import { createEntity } from './createEntity.js'
-import { physicsComponent } from '../component/physicsComponent.js'
-import { positionComponent } from '../component/positionComponent.js'
 import { rotationComponent } from '../component/rotationComponent.js'
 import { shipComponent } from '../component/shipComponent.js'
-import { sizeComponent } from '../component/sizeComponent.js'
 import { velocityComponent } from '../component/velocityComponent.js'
 
 
@@ -36,24 +33,19 @@ import { velocityComponent } from '../component/velocityComponent.js'
  */
 export function createEnemy(config) {
 	const {
-		height,
 		position,
-		width,
 		world,
 	} = config
 
 	return createEntity(
 		aiComponent(),
-		physicsComponent({
-			height,
+		shipComponent({
 			position,
-			width,
+			shipClass: SHIP_CLASS.BATTLECRUISER,
+			species: SPECIES.SOLARIAN,
 			world,
 		}),
-		positionComponent(position.x, position.y),
 		rotationComponent(0),
-		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.BATTLECRUISER),
-		sizeComponent(width, height),
 		velocityComponent(0, 0),
 	)
 }

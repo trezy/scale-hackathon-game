@@ -7,11 +7,8 @@ import {
 	WEAPONS,
 } from '@space-game/static-data'
 import { createEntity } from './createEntity.js'
-import { physicsComponent } from '../component/physicsComponent.js'
-import { positionComponent } from '../component/positionComponent.js'
 import { rotationComponent } from '../component/rotationComponent.js'
 import { shipComponent } from '../component/shipComponent.js'
-import { sizeComponent } from '../component/sizeComponent.js'
 import { velocityComponent } from '../component/velocityComponent.js'
 import { weaponsComponent } from '../component/weaponsComponent.js'
 
@@ -33,18 +30,19 @@ import { weaponsComponent } from '../component/weaponsComponent.js'
  */
 export function createPlayer(config) {
 	const {
-		height,
 		position,
-		width,
 		world,
 	} = config
 
 	return createEntity(
 		{ isPlayer: true },
-		positionComponent(position.x, position.y),
+		shipComponent({
+			position,
+			shipClass: SHIP_CLASS.FIGHTER,
+			species: SPECIES.SOLARIAN,
+			world,
+		}),
 		rotationComponent(0),
-		shipComponent(SPECIES.SOLARIAN, SHIP_CLASS.FIGHTER),
-		sizeComponent(width, height),
 		velocityComponent(0, 0),
 		weaponsComponent(
 			{
@@ -71,11 +69,5 @@ export function createPlayer(config) {
 				type: WEAPON_TYPES.GUN,
 			},
 		),
-		physicsComponent({
-			height,
-			position,
-			width,
-			world,
-		}),
 	)
 }
