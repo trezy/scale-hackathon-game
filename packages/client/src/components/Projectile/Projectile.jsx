@@ -31,7 +31,7 @@ export function Projectile(props) {
 	const spritesheet = Assets.get(`${projectile.species}-projectile-${projectile.type}`)
 
 	return (
-		<Container rotation={entity.rotation}>
+		<Container rotation={entity.rotation.value}>
 			<AnimatedSprite
 				anchor={SPRITE_ANCHOR}
 				animationSpeed={ANIMATION_SPEED}

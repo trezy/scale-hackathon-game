@@ -26,10 +26,11 @@ export function Entity(props) {
 		<Container
 			x={entity.position.x}
 			y={entity.position.y}>
-			{Boolean(entity.projectile) && (
+			{'projectile' in entity && (
 				<Projectile entity={entity} />
 			)}
-			{Boolean(entity.ship) && (
+
+			{'ship' in entity && (
 				<Ship entity={entity} />
 			)}
 		</Container>
