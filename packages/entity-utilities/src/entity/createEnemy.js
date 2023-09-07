@@ -35,14 +35,14 @@ import { velocityComponent } from '../component/velocityComponent.js'
 export function createEnemy(x, y, width, height) {
 	return createEntity(
 		aiComponent(),
-		colliderComponent(/*{
+		colliderComponent({
 			height,
 			position: {
 				x,
 				y,
 			},
 			width,
-		}*/),
+		}),
 		colorComponent(0xff0000),
 		positionComponent(x, y),
 		rotationComponent(0),

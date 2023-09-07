@@ -1,17 +1,6 @@
-// Module imports
-import {
-	SHIP_CLASS,
-	SPECIES,
-} from '@space-game/static-data'
-import { store } from '@space-game/store'
-
-
-
-
-
 // Local imports
-// import { createCollider } from '../physics/createCollider.js'
-// import { createStaticBody } from '../physics/createRigidBody.js'
+import { createCollider } from '../physics/createCollider.js'
+import { createStaticBody } from '../physics/createRigidBody.js'
 
 
 
@@ -28,33 +17,27 @@ import { store } from '@space-game/store'
  * @param {number} config.width The width of the entity's collider.
  * @returns {{ physics: object }} The new collider component.
  */
-export function colliderComponent(/* config */) {
-	console.log({
-		store,
-		SHIP_CLASS,
-		SPECIES,
-	})
+export function colliderComponent(config) {
+	const {
+		height,
+		position,
+		width,
+	} = config
 
-	// const {
-	// 	height,
-	// 	position,
-	// 	width,
-	// } = config
+	const body = createStaticBody(
+		position.x + (width / 2),
+		position.y + (height / 2),
+	)
 
-	// const body = createStaticBody(
-	// 	position.x + (width / 2),
-	// 	position.y + (height / 2),
-	// )
-
-	// const collider = createCollider('rectangle', {
-	// 	height,
-	// 	width,
-	// }, body)
+	const collider = createCollider('rectangle', {
+		height,
+		width,
+	}, body)
 
 	return {
 		physics: {
-			// body,
-			// collider,
+			body,
+			collider,
 		},
 	}
 }
