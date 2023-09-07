@@ -21,7 +21,7 @@ import { weaponsComponent } from '../component/weaponsComponent.js'
 /**
  * Creates the player-controlled entity.
  *
- * @returns {object} The new entity.
+ * @returns {import('../types/Entity.js').Entity} The new entity.
  */
 export function createPlayer() {
 	return createEntity(

@@ -13,6 +13,9 @@
 		"skipLibCheck": true,
     "target": "esnext"
 	},
+	"include": [
+		"src/index.js"
+	],
 	"exclude": [
 		"**/*.ts",
 		".github",

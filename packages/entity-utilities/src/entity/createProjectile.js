@@ -17,7 +17,7 @@ import { velocityComponent } from '../component/velocityComponent.js'
  *
  * @param {object} parentEntity The entity that owns the weapon that fired the projectile.
  * @param {object} weapon The weapon that fired the projectile.
- * @returns {object} The new entity.
+ * @returns {import('../types/Entity.js').Entity} The new entity.
  */
 export function createProjectile(parentEntity, weapon) {
 	const {

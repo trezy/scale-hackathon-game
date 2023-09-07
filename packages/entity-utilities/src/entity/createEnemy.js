@@ -30,7 +30,7 @@ import { velocityComponent } from '../component/velocityComponent.js'
  * @param {number} y The entity's position on the vertical axis.
  * @param {number} width The width of the entity.
  * @param {number} height The height of the entity.
- * @returns {object} The new entity.
+ * @returns {import('../types/Entity.js').Entity} The new entity.
  */
 export function createEnemy(x, y, width, height) {
 	return createEntity(

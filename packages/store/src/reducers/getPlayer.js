@@ -3,7 +3,7 @@
  *
  * @param {object} state The game state
  * @param {object[]} state.entities All game entities.
- * @returns {object} The player entity.
+ * @returns {import('@space-game/entity-utilities').Entity} The player entity.
  */
 export function getPlayer({ entities }) {
 	return entities.find(entity => entity.isPlayer)

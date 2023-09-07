@@ -9,7 +9,7 @@ import { v4 as uuid } from 'uuid'
  * Creates a generic entity.
  *
  * @param {object[]} components Extra components to be set on the entity.
- * @returns {object} The new entity.
+ * @returns {import('../types/Entity.js').Entity} The new entity.
  */
 export function createEntity(...components) {
 	return {
