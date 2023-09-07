@@ -14,9 +14,10 @@ export function physicsSystem() {
 
 		return {
 			entities: entities.map(entity => {
-				if (('velocity' in entity) && ('physics' in entity)) {
+				if (('physics' in entity) && ('rotation' in entity) && ('velocity' in entity)) {
 					const {
 						physics,
+						rotation,
 						velocity,
 					} = entity
 
@@ -24,6 +25,8 @@ export function physicsSystem() {
 						x: velocity.x,
 						y: velocity.y,
 					}, true)
+
+					physics.body.setRotation(rotation.value, true)
 				}
 
 				return entity
