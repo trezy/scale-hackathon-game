@@ -6,10 +6,6 @@ import { makeStore } from 'statery'
 
 
 // Local imports
-import {
-	createEnemy,
-	createPlayer,
-} from '@space-game/entity-utilities'
 import { CONTROL_BINDINGS } from '@space-game/static-data'
 import { generateInitialControlState } from './helpers/generateInitialControlState.js'
 
@@ -38,11 +34,7 @@ export const store = makeStore({
 	deltaMS: 0,
 
 	/** @type {object[]} */
-	entities: [
-		createEnemy(100, 100, 20, 20),
-		createEnemy(150, 80, 20, 20),
-		createPlayer(),
-	],
+	entities: [],
 
 	/** @type {null | number[]} */
 	entityRenderOrder: null,
