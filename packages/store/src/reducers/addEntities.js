@@ -1,5 +1,5 @@
-// Module imports
-import { store } from '@space-game/store'
+// Local imports
+import { store } from '../store.js'
 
 
 
