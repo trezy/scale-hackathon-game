@@ -1,5 +1,6 @@
 // Module imports
-import { getRotationFromVector } from '@space-game/utilities'
+// import { getRotationFromVector } from '@space-game/utilities'
+import { PIXELS_PER_METER } from '@space-game/static-data'
 
 
 
@@ -12,20 +13,19 @@ import { getRotationFromVector } from '@space-game/utilities'
  */
 export function moveSystem(store) {
 	store.set(previousState => {
-		const {
-			delta,
-			entities,
-		} = previousState
+		const { entities } = previousState
 
 		return {
 			entities: entities.map(entity => {
-				if ('velocity' in entity) {
-					entity.position.x += entity.velocity.x * delta
-					entity.position.y += entity.velocity.y * delta
+				if ('physics' in entity) {
+					const {
+						physics,
+						position,
+					} = entity
 
-					if (('rotation' in entity) && ((entity.velocity.x !== 0) || (entity.velocity.y !== 0))) {
-						entity.rotation = getRotationFromVector(entity.velocity.x, entity.velocity.y)
-					}
+					// Pull the position from the collision body
+					position.x = physics.body.translation().x * PIXELS_PER_METER
+					position.y = physics.body.translation().y * PIXELS_PER_METER
 				}
 
 				return entity

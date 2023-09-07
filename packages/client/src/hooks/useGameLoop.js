@@ -6,6 +6,7 @@ import {
 import { aiSystem } from '@space-game/ai-system'
 import { cullSystem } from '@space-game/cull-system'
 import { moveSystem } from '@space-game/move-system'
+import { physicsSystem } from '@space-game/physics-system'
 import { projectileSystem } from '@space-game/projectile-system'
 import { sortSystem } from '@space-game/sort-system'
 import { spawnSystem } from '@space-game/spawn-system'
@@ -34,10 +35,11 @@ export function useGameLoop() {
 		}
 
 		controlsSystem(store)
-		moveSystem(store)
-		aiSystem(store)
 		spawnSystem(store)
+		aiSystem(store)
+		physicsSystem(store)
 		projectileSystem(store)
+		moveSystem(store)
 		cullSystem(store)
 		sortSystem(store)
 	})

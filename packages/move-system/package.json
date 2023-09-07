@@ -7,6 +7,7 @@
 	"dependencies": {
 		"@loopholelabs/scale-signature": "0.2.11",
 		"@loopholelabs/scale-signature-http": "0.3.8",
+		"@space-game/static-data": "workspace:*",
 		"@space-game/utilities": "workspace:*"
 	}
 }
